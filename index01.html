@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licencias de Software - Tech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <div class="logo">
+                <a href="#">Tech Solutions</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Windows</a></li>
+                <li><a href="#">Office</a></li>
+                <li><a href="#">Antivirus</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner-container">
+            <div class="banner-slider">
+                <img src="https://placehold.co/1200x400/007BFF/FFFFFF?text=Windows+11+Pro" alt="Banner de Windows 11" class="slide active">
+                <img src="https://placehold.co/1200x400/17A2B8/FFFFFF?text=Office+365" alt="Banner de Office 365" class="slide">
+                <img src="https://placehold.co/1200x400/28A745/FFFFFF?text=Ofertas+Especiales" alt="Banner de Ofertas" class="slide">
+            </div>
+            <button class="banner-nav prev" id="prevBtn">&#10094;</button>
+            <button class="banner-nav next" id="nextBtn">&#10095;</button>
+        </section>
+
+        <section class="product-section">
+            <h2>Nuestros Productos</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="1" data-name="Windows 11 Pro" data-price="199.99">
+                    <img src="https://placehold.co/300x200/007BFF/FFFFFF?text=Windows+11" alt="Logo de Windows 11">
+                    <h3>Windows 11 Pro</h3>
+                    <p>El sistema operativo más avanzado de Microsoft, ideal para profesionales y empresas.</p>
+                    <div class="price">$199.99</div>
+                    <button class="buy-button">Añadir al carrito</button>
+                </div>
+                <div class="product-card" data-id="2" data-name="Microsoft 365 Personal" data-price="69.99">
+                    <img src="https://placehold.co/300x200/17A2B8/FFFFFF?text=Office+365" alt="Logo de Office 365">
+                    <h3>Microsoft 365 Personal</h3>
+                    <p>Incluye Word, Excel, PowerPoint y Outlook, con 1TB de almacenamiento en la nube.</p>
+                    <div class="price">$69.99/año</div>
+                    <button class="buy-button">Añadir al carrito</button>
+                </div>
+                <div class="product-card" data-id="3" data-name="Windows Server 2022" data-price="499.99">
+                    <img src="https://placehold.co/300x200/007BFF/FFFFFF?text=Windows+Server" alt="Logo de Windows Server">
+                    <h3>Windows Server 2022</h3>
+                    <p>La plataforma ideal para construir una infraestructura de aplicaciones y servicios conectados.</p>
+                    <div class="price">$499.99</div>
+                    <button class="buy-button">Añadir al carrito</button>
+                </div>
+                <div class="product-card" data-id="4" data-name="Office Hogar y Empresas 2021" data-price="249.99">
+                    <img src="https://placehold.co/300x200/17A2B8/FFFFFF?text=Office+2021" alt="Logo de Office 2021">
+                    <h3>Office Hogar y Empresas 2021</h3>
+                    <p>Compra de pago único con las aplicaciones clásicas para un solo equipo PC o Mac.</p>
+                    <div class="price">$249.99</div>
+                    <button class="buy-button">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items">
+                <!-- Los artículos del carrito se insertarán aquí -->
+            </div>
+            <div class="cart-total">
+                <strong>Total: $<span id="cart-total-amount">0.00</span></strong>
+            </div>
+            <button class="checkout-button">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tech Solutions. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
