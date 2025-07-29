@@ -342,3 +342,27 @@ footer {
     border-top: 1px solid #333;
     color: var(--text-muted-color);
 }
+.redes-sociales {
+    text-align: center;
+    margin-top: 20px; 
+}
+.redes-sociales a{
+    display: inline-block;
+    margin: 0 10px;
+}
+.icono-redes {
+    position: relative;
+    width: 20px;  
+    height: 20px;
+    transition: transform 0.3s ease-in-out;    
+}
+.redes-sociales img:hover {
+    transform: scale(1.2); 
+}
+@media (max-width: 600px) {
+
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
