@@ -130,3 +130,37 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartUI();
     }
 });
+
+// --- Lógica del Icono de WhatsApp ---
+var icon = document.getElementById('whatsappIcon');
+icon.style.width = "60px";
+icon.style.height = "60px";
+
+icon.addEventListener('mouseover', function () {
+    icon.style.width = "80px";
+    icon.style.height = "80px";
+});
+
+icon.addEventListener('mouseout', function () {
+    icon.style.width = "60px";
+    icon.style.height = "60px";
+});
+
+
+window.addEventListener('scroll', function () {
+    var icon = document.querySelector('.whatsapp-container');
+    if (window.scrollY > 300) {
+        icon.style.opacity = "1";    // más nítido cuando haces scroll
+    } else {
+        icon.style.opacity = "0.4";  // más transparente al inicio
+    }
+});
+
+var whatsappLink = document.getElementById('whatsappLink');
+whatsappLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    var phoneNumber = '51983412557'; // Reemplaza con tu número de WhatsApp
+    var message = 'Hola, estoy interesado en tus productos.';
+    var url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+});
