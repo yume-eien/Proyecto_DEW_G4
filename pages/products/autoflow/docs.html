@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentación de Autoflow - Software de automatización masiva por macros">
+    <title>Documentación de Autoflow | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/products.css">
+    <link rel="stylesheet" href="/assets/css/legal.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Selector de idioma flotante -->
+        <div class="language-selector">
+            <button class="language-btn active" data-lang="en">EN</button>
+            <button class="language-btn" data-lang="es">ES</button>
+            <button class="language-btn" data-lang="fr">FR</button>
+        </div>
+
+        <!-- Header con navegación -->
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="/index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                            <li><a href="/pages/catalog/index.html" class="nav-link active" data-i18n="nav.products">Products</a></li>
+                            <li><a href="/pages/support/index.html" class="nav-link" data-i18n="nav.support">Support</a></li>
+                            <!-- <li><a href="/pages/user/dashboard.html" class="nav-link" data-i18n="nav.account">My Account</a></li> -->
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="cart-widget">
+                            <a href="/pages/cart.html" class="cart-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                        <button class="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Cabecera de documentación -->
+        <div class="legal-header">
+            <div class="container">
+                <h1 class="page-title">Documentación de Autoflow</h1>
+                <p class="page-description">Guía completa para utilizar Autoflow y sacar el máximo provecho de sus funcionalidades de automatización.</p>
+            </div>
+        </div>
+
+        <!-- Contenido de documentación -->
+        <div class="legal-content">
+            <div class="container">
+                <div class="legal-container">
+                    <!-- Sidebar with Table of Contents -->
+                    <aside class="legal-sidebar">
+                        <div class="toc-container">
+                            <h2>Tabla de Contenidos</h2>
+                            <ul class="toc-list">
+                                <li><a href="#introduction">Introducción</a></li>
+                                <li><a href="#installation">Instalación</a></li>
+                                <li><a href="#interface">Interfaz de Usuario</a></li>
+                                <li><a href="#creating-macros">Creación de Macros</a></li>
+                                <li><a href="#actions">Acciones Disponibles</a></li>
+                                <li><a href="#scheduling">Programación de Tareas</a></li>
+                                <li><a href="#conditions">Condiciones y Bucles</a></li>
+                                <li><a href="#variables">Variables y Parámetros</a></li>
+                                <li><a href="#shortcuts">Atajos de Teclado</a></li>
+                                <li><a href="#examples">Ejemplos Prácticos</a></li>
+                                <li><a href="#troubleshooting">Solución de Problemas</a></li>
+                                <li><a href="#faq">Preguntas Frecuentes</a></li>
+                            </ul>
+                        </div>
+                        <div class="legal-links">
+                            <h3>Enlaces Relacionados</h3>
+                            <ul>
+                                <li><a href="/pages/products/autoflow/index.html">Página del Producto</a></li>
+                                <li><a href="/pages/support/index.html">Centro de Soporte</a></li>
+                                <li><a href="/pages/catalog/index.html">Otros Productos</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <!-- Documentation Content -->
+                    <div class="legal-document">
+                        <section id="introduction">
+                            <h2>Introducción a Autoflow</h2>
+                            <p>Autoflow es un potente software de automatización masiva diseñado para simplificar tareas repetitivas a través de macros personalizables. Con Autoflow, puedes definir precisamente qué acciones se realizan, cuándo, a qué velocidad y cuántas veces, todo en una interfaz intuitiva y accesible.</p>
+                            <p>Este software está orientado a usuarios con bajo conocimiento técnico, proporcionando herramientas de automatización potentes sin la necesidad de programación avanzada.</p>
+                        </section>
+
+                        <section id="installation">
+                            <h2>Instalación</h2>
+                            <p>Para instalar Autoflow en tu sistema, sigue estos sencillos pasos:</p>
+                            <ol>
+                                <li>Descarga el instalador desde el enlace recibido en tu email de compra.</li>
+                                <li>Ejecuta el archivo de instalación (.exe para Windows, .dmg para macOS o .deb/.rpm para Linux).</li>
+                                <li>Sigue las instrucciones del asistente de instalación.</li>
+                                <li>Al finalizar, inicia Autoflow.</li>
+                                <li>Ingresa la clave de licencia proporcionada en tu email.</li>
+                            </ol>
+                            <p>Requisitos del sistema:</p>
+                            <ul>
+                                <li><strong>Sistema Operativo:</strong> Windows 10/11, macOS 11+, o Linux (Ubuntu 20.04+, Fedora 34+)</li>
+                                <li><strong>Procesador:</strong> Intel/AMD dual-core o superior</li>
+                                <li><strong>Memoria:</strong> 4GB RAM mínimo, 8GB recomendado</li>
+                                <li><strong>Espacio en disco:</strong> 200MB disponibles</li>
+                                <li><strong>Resolución:</strong> 1280x720 o superior</li>
+                            </ul>
+                        </section>
+
+                        <section id="interface">
+                            <h2>Interfaz de Usuario</h2>
+                            <p>La interfaz de Autoflow está diseñada para ser intuitiva y fácil de usar, organizándose en las siguientes áreas principales:</p>
+                            
+                            <h3>Barra de Herramientas Principal</h3>
+                            <p>Ubicada en la parte superior de la ventana, contiene acciones comunes como crear, abrir, guardar macros y acceder a la configuración.</p>
+                            
+                            <h3>Panel de Macros</h3>
+                            <p>Situado a la izquierda, muestra todas tus macros guardadas organizadas por categorías. Puedes crear, duplicar, eliminar o editar macros desde este panel.</p>
+                            
+                            <h3>Editor de Macros</h3>
+                            <p>El área central donde construyes y editas tus macros. Aquí puedes añadir, eliminar y reorganizar acciones mediante un sistema de arrastrar y soltar.</p>
+                            
+                            <h3>Panel de Propiedades</h3>
+                            <p>A la derecha, muestra las propiedades y configuraciones de la acción o elemento seleccionado actualmente, permitiéndote ajustar parámetros específicos.</p>
+                            
+                            <h3>Consola de Registro</h3>
+                            <p>En la parte inferior, muestra información sobre la ejecución de macros, errores y mensajes del sistema, útil para depurar tus automatizaciones.</p>
+                        </section>
+
+                        <section id="creating-macros">
+                            <h2>Creación de Macros</h2>
+                            <p>Crear una macro en Autoflow es un proceso sencillo e intuitivo:</p>
+                            <ol>
+                                <li><strong>Iniciar nueva macro:</strong> Haz clic en el botón "Nueva Macro" en la barra de herramientas o usa el atajo Ctrl+N (Cmd+N en macOS).</li>
+                                <li><strong>Definir propiedades básicas:</strong> Asigna un nombre y descripción a tu macro, y selecciona una categoría opcional.</li>
+                                <li><strong>Añadir acciones:</strong> Arrastra acciones desde la biblioteca al editor de macros.</li>
+                                <li><strong>Configurar acciones:</strong> Selecciona cada acción y ajusta sus propiedades en el panel de propiedades.</li>
+                                <li><strong>Establecer orden:</strong> Reorganiza las acciones arrastrándolas a la posición deseada.</li>
+                                <li><strong>Probar la macro:</strong> Utiliza el botón "Probar" para ejecutar la macro y verificar su funcionamiento.</li>
+                                <li><strong>Guardar la macro:</strong> Haz clic en "Guardar" o usa Ctrl+S (Cmd+S en macOS).</li>
+                            </ol>
+                            <p>Puedes utilizar el modo de grabación para crear macros rápidamente:</p>
+                            <ol>
+                                <li>Haz clic en el botón "Grabar" en la barra de herramientas.</li>
+                                <li>Realiza las acciones que deseas automatizar.</li>
+                                <li>Haz clic en "Detener" cuando hayas terminado.</li>
+                                <li>Edita y refina las acciones grabadas según sea necesario.</li>
+                            </ol>
+                        </section>
+
+                        <section id="actions">
+                            <h2>Acciones Disponibles</h2>
+                            <p>Autoflow incluye una amplia biblioteca de acciones predefinidas que puedes utilizar para construir tus macros:</p>
+                            
+                            <h3>Acciones de Ratón</h3>
+                            <ul>
+                                <li><strong>Clic:</strong> Simula un clic de ratón (izquierdo, derecho o central) en una posición específica o relativa.</li>
+                                <li><strong>Doble Clic:</strong> Simula un doble clic del ratón.</li>
+                                <li><strong>Arrastrar:</strong> Mueve el ratón arrastrando desde un punto a otro.</li>
+                                <li><strong>Mover:</strong> Desplaza el cursor a una posición específica o relativa.</li>
+                                <li><strong>Desplazamiento:</strong> Simula el uso de la rueda de desplazamiento.</li>
+                            </ul>
+                            
+                            <h3>Acciones de Teclado</h3>
+                            <ul>
+                                <li><strong>Presionar Tecla:</strong> Simula la pulsación de una tecla específica.</li>
+                                <li><strong>Escribir Texto:</strong> Ingresa una cadena de texto.</li>
+                                <li><strong>Atajos de Teclado:</strong> Simula combinaciones de teclas (Ctrl+C, Alt+Tab, etc.).</li>
+                            </ul>
+                            
+                            <h3>Acciones del Sistema</h3>
+                            <ul>
+                                <li><strong>Ejecutar Programa:</strong> Inicia una aplicación externa.</li>
+                                <li><strong>Esperar:</strong> Pausa la ejecución por un tiempo especificado.</li>
+                                <li><strong>Ventana:</strong> Maximiza, minimiza, cierra o cambia entre ventanas.</li>
+                                <li><strong>Portapapeles:</strong> Acciones para copiar, cortar y pegar.</li>
+                            </ul>
+                            
+                            <h3>Acciones de Interfaz</h3>
+                            <ul>
+                                <li><strong>Buscar Imagen:</strong> Localiza una imagen en pantalla.</li>
+                                <li><strong>Buscar Texto:</strong> Busca texto en pantalla mediante OCR.</li>
+                                <li><strong>Buscar Color:</strong> Detecta un color específico en pantalla.</li>
+                                <li><strong>Buscar Elemento UI:</strong> Interactúa con elementos de interfaz como botones o menús.</li>
+                            </ul>
+                            
+                            <h3>Acciones de Datos</h3>
+                            <ul>
+                                <li><strong>Lectura/Escritura de Archivos:</strong> Manipula archivos de texto y datos.</li>
+                                <li><strong>Variables:</strong> Crea, modifica y utiliza variables.</li>
+                                <li><strong>Extraer Datos:</strong> Obtiene información de webs, documentos o aplicaciones.</li>
+                                <li><strong>Base de Datos:</strong> Interactúa con bases de datos simples.</li>
+                            </ul>
+                            
+                            <h3>Acciones Web</h3>
+                            <ul>
+                                <li><strong>Navegador:</strong> Abre, navega y controla el navegador web.</li>
+                                <li><strong>Completar Formularios:</strong> Rellena y envía formularios web.</li>
+                                <li><strong>Descargar:</strong> Descarga archivos desde URLs.</li>
+                            </ul>
+                            
+                            <h3>Acciones Avanzadas</h3>
+                            <ul>
+                                <li><strong>Bucles:</strong> Repetición de acciones.</li>
+                                <li><strong>Condiciones:</strong> Ejecución condicional.</li>
+                                <li><strong>Funciones:</strong> Crea y llama a subrutinas.</li>
+                                <li><strong>API:</strong> Interactúa con servicios web vía REST o SOAP.</li>
+                            </ul>
+                        </section>
+
+                        <section id="scheduling">
+                            <h2>Programación de Tareas</h2>
+                            <p>Autoflow permite programar tus macros para que se ejecuten automáticamente en momentos específicos:</p>
+                            
+                            <h3>Programación Única</h3>
+                            <p>Ejecuta la macro una sola vez en una fecha y hora específicas.</p>
+                            <ol>
+                                <li>Selecciona la macro en el panel de macros.</li>
+                                <li>Haz clic en "Programar" en la barra de herramientas.</li>
+                                <li>Selecciona "Programación única".</li>
+                                <li>Configura la fecha y hora.</li>
+                                <li>Haz clic en "Guardar programación".</li>
+                            </ol>
+                            
+                            <h3>Programación Recurrente</h3>
+                            <p>Ejecuta la macro de forma repetida según un patrón definido.</p>
+                            <ol>
+                                <li>Selecciona la macro en el panel de macros.</li>
+                                <li>Haz clic en "Programar" en la barra de herramientas.</li>
+                                <li>Selecciona "Programación recurrente".</li>
+                                <li>Define el patrón (diario, semanal, mensual, etc.).</li>
+                                <li>Configura horarios y fechas específicas.</li>
+                                <li>Establece una fecha de finalización opcional.</li>
+                                <li>Haz clic en "Guardar programación".</li>
+                            </ol>
+                            
+                            <h3>Programación por Eventos</h3>
+                            <p>Ejecuta la macro cuando ocurra un evento específico en el sistema.</p>
+                            <ol>
+                                <li>Selecciona la macro en el panel de macros.</li>
+                                <li>Haz clic en "Programar" en la barra de herramientas.</li>
+                                <li>Selecciona "Programación por eventos".</li>
+                                <li>Elige el tipo de evento (inicio del sistema, inactividad, etc.).</li>
+                                <li>Configura parámetros adicionales si es necesario.</li>
+                                <li>Haz clic en "Guardar programación".</li>
+                            </ol>
+                            
+                            <h3>Administrador de Tareas</h3>
+                            <p>El administrador de tareas te permite ver, editar y eliminar todas tus programaciones existentes:</p>
+                            <ol>
+                                <li>Haz clic en "Herramientas" en la barra de menú.</li>
+                                <li>Selecciona "Administrador de Tareas".</li>
+                                <li>Visualiza todas las tareas programadas.</li>
+                                <li>Utiliza los botones de acción para habilitar/deshabilitar, editar o eliminar programaciones.</li>
+                            </ol>
+                        </section>
+
+                        <section id="conditions">
+                            <h2>Condiciones y Bucles</h2>
+                            <p>Autoflow permite crear macros avanzadas utilizando condiciones y bucles para controlar el flujo de ejecución:</p>
+                            
+                            <h3>Condiciones (If-Then-Else)</h3>
+                            <p>Las condiciones te permiten ejecutar acciones diferentes basadas en verificaciones:</p>
+                            <ul>
+                                <li><strong>If (Si):</strong> Define la condición a evaluar.</li>
+                                <li><strong>Then (Entonces):</strong> Acciones a ejecutar si la condición es verdadera.</li>
+                                <li><strong>Else (Sino):</strong> Acciones a ejecutar si la condición es falsa.</li>
+                            </ul>
+                            <p>Puedes crear condiciones basadas en:</p>
+                            <ul>
+                                <li>Comparación de variables y valores.</li>
+                                <li>Presencia de imágenes o colores en pantalla.</li>
+                                <li>Detección de texto en pantalla.</li>
+                                <li>Estado de elementos de la interfaz.</li>
+                                <li>Resultados de acciones previas.</li>
+                            </ul>
+                            
+                            <h3>Bucles</h3>
+                            <p>Los bucles permiten repetir un conjunto de acciones múltiples veces:</p>
+                            <ul>
+                                <li><strong>Bucle Fijo:</strong> Repite acciones un número específico de veces.</li>
+                                <li><strong>Bucle Mientras:</strong> Repite acciones mientras una condición sea verdadera.</li>
+                                <li><strong>Bucle Hasta:</strong> Repite acciones hasta que una condición sea verdadera.</li>
+                                <li><strong>Bucle For Each:</strong> Repite acciones para cada elemento en una lista o colección.</li>
+                            </ul>
+                            
+                            <h3>Control de Bucles</h3>
+                            <p>Puedes controlar la ejecución de bucles con estas acciones especiales:</p>
+                            <ul>
+                                <li><strong>Break (Romper):</strong> Sale inmediatamente del bucle actual.</li>
+                                <li><strong>Continue (Continuar):</strong> Salta a la siguiente iteración del bucle.</li>
+                                <li><strong>Exit (Salir):</strong> Termina completamente la ejecución de la macro.</li>
+                            </ul>
+                            
+                            <h3>Ejemplo de Condición</h3>
+                            <pre>
+Si [Buscar Imagen: "botón_login.png"] es Encontrado
+    Entonces:
+        [Clic: En posición de imagen]
+        [Esperar: 2 segundos]
+    Sino:
+        [Clic: En (X: 450, Y: 300)]
+        [Esperar: 1 segundo]
+        [Buscar Imagen: "botón_login.png"]
+</pre>
+                            
+                            <h3>Ejemplo de Bucle</h3>
+                            <pre>
+Repetir 5 veces:
+    [Clic: En (X: 100, Y: 200)]
+    [Esperar: 1 segundo]
+    [Presionar Tecla: Tab]
+    [Escribir Texto: "Ejemplo"]
+    [Presionar Tecla: Enter]
+    [Esperar: 2 segundos]
+</pre>
+                        </section>
+
+                        <section id="variables">
+                            <h2>Variables y Parámetros</h2>
+                            <p>Las variables en Autoflow permiten almacenar y manipular datos durante la ejecución de una macro:</p>
+                            
+                            <h3>Tipos de Variables</h3>
+                            <ul>
+                                <li><strong>Texto:</strong> Para almacenar cadenas de caracteres.</li>
+                                <li><strong>Número:</strong> Para almacenar valores numéricos.</li>
+                                <li><strong>Booleano:</strong> Para almacenar valores verdadero/falso.</li>
+                                <li><strong>Lista:</strong> Para almacenar colecciones de valores.</li>
+                                <li><strong>Diccionario:</strong> Para almacenar pares clave-valor.</li>
+                                <li><strong>Fecha/Hora:</strong> Para almacenar información temporal.</li>
+                                <li><strong>Coordenadas:</strong> Para almacenar posiciones X,Y en pantalla.</li>
+                            </ul>
+                            
+                            <h3>Creación y Manejo de Variables</h3>
+                            <p>Para crear y utilizar variables:</p>
+                            <ol>
+                                <li>Añade la acción "Crear Variable" a tu macro.</li>
+                                <li>Asigna un nombre a la variable (ej. "contador" o "nombre_usuario").</li>
+                                <li>Selecciona el tipo de variable.</li>
+                                <li>Establece un valor inicial opcional.</li>
+                            </ol>
+                            <p>Para modificar variables existentes:</p>
+                            <ol>
+                                <li>Utiliza la acción "Modificar Variable".</li>
+                                <li>Selecciona la variable a modificar.</li>
+                                <li>Elige la operación (asignar, incrementar, concatenar, etc.).</li>
+                                <li>Establece el nuevo valor o la expresión a utilizar.</li>
+                            </ol>
+                            
+                            <h3>Variables del Sistema</h3>
+                            <p>Autoflow proporciona variables del sistema predefinidas:</p>
+                            <ul>
+                                <li><strong>{DATE}:</strong> Fecha actual (formato: AAAA-MM-DD).</li>
+                                <li><strong>{TIME}:</strong> Hora actual (formato: HH:MM:SS).</li>
+                                <li><strong>{DATETIME}:</strong> Fecha y hora actual (formato: AAAA-MM-DD HH:MM:SS).</li>
+                                <li><strong>{CLIPBOARD}:</strong> Contenido actual del portapapeles.</li>
+                                <li><strong>{SCREEN_WIDTH}:</strong> Ancho de la pantalla en píxeles.</li>
+                                <li><strong>{SCREEN_HEIGHT}:</strong> Alto de la pantalla en píxeles.</li>
+                                <li><strong>{MOUSE_X}:</strong> Posición X actual del cursor.</li>
+                                <li><strong>{MOUSE_Y}:</strong> Posición Y actual del cursor.</li>
+                                <li><strong>{ACTIVE_WINDOW}:</strong> Título de la ventana activa.</li>
+                                <li><strong>{USERNAME}:</strong> Nombre del usuario del sistema.</li>
+                            </ul>
+                            
+                            <h3>Parámetros de Macro</h3>
+                            <p>Puedes definir parámetros para hacer tus macros más flexibles y reutilizables:</p>
+                            <ol>
+                                <li>En la ventana de propiedades de la macro, haz clic en "Parámetros".</li>
+                                <li>Haz clic en "Añadir Parámetro".</li>
+                                <li>Define un nombre, tipo, valor predeterminado y descripción.</li>
+                                <li>Utiliza estos parámetros dentro de tu macro con la sintaxis {PARAM:nombre_parámetro}.</li>
+                            </ol>
+                            <p>Al ejecutar la macro, se te pedirá que introduzcas los valores para estos parámetros.</p>
+                            
+                            <h3>Expresiones y Fórmulas</h3>
+                            <p>Autoflow admite expresiones y fórmulas para cálculos dinámicos:</p>
+                            <ul>
+                                <li><strong>Operadores matemáticos:</strong> +, -, *, /, %, ^</li>
+                                <li><strong>Operadores de comparación:</strong> =, !=, &lt;, &gt;, &lt;=, &gt;=</li>
+                                <li><strong>Operadores lógicos:</strong> AND, OR, NOT</li>
+                                <li><strong>Funciones:</strong> ROUND(), ABS(), FLOOR(), CEILING(), MIN(), MAX(), etc.</li>
+                                <li><strong>Funciones de texto:</strong> CONCAT(), SUBSTR(), LENGTH(), UPPER(), LOWER(), etc.</li>
+                                <li><strong>Funciones de fecha:</strong> DAY(), MONTH(), YEAR(), ADDDAYS(), etc.</li>
+                            </ul>
+                            <p>Ejemplo: {resultado = (valor1 * 2) + ROUND(valor2 / 3)}</p>
+                        </section>
+
+                        <section id="shortcuts">
+                            <h2>Atajos de Teclado</h2>
+                            <p>Autoflow ofrece numerosos atajos de teclado para aumentar tu productividad:</p>
+                            
+                            <h3>Atajos Generales</h3>
+                            <ul>
+                                <li><strong>Ctrl+N (Cmd+N):</strong> Nueva macro</li>
+                                <li><strong>Ctrl+O (Cmd+O):</strong> Abrir macro</li>
+                                <li><strong>Ctrl+S (Cmd+S):</strong> Guardar macro</li>
+                                <li><strong>Ctrl+Shift+S (Cmd+Shift+S):</strong> Guardar como</li>
+                                <li><strong>Ctrl+Z (Cmd+Z):</strong> Deshacer</li>
+                                <li><strong>Ctrl+Y (Cmd+Y):</strong> Rehacer</li>
+                                <li><strong>Ctrl+F (Cmd+F):</strong> Buscar</li>
+                                <li><strong>F1:</strong> Ayuda</li>
+                                <li><strong>Ctrl+, (Cmd+,):</strong> Configuración</li>
+                            </ul>
+                            
+                            <h3>Atajos de Edición</h3>
+                            <ul>
+                                <li><strong>Ctrl+X (Cmd+X):</strong> Cortar acción</li>
+                                <li><strong>Ctrl+C (Cmd+C):</strong> Copiar acción</li>
+                                <li><strong>Ctrl+V (Cmd+V):</strong> Pegar acción</li>
+                                <li><strong>Delete (Fn+Delete):</strong> Eliminar acción</li>
+                                <li><strong>Ctrl+Up/Down (Cmd+Up/Down):</strong> Mover acción arriba/abajo</li>
+                                <li><strong>Tab:</strong> Indentar grupo de acciones</li>
+                                <li><strong>Shift+Tab:</strong> Reducir indentación</li>
+                                <li><strong>Ctrl+G (Cmd+G):</strong> Agrupar acciones seleccionadas</li>
+                                <li><strong>Ctrl+U (Cmd+U):</strong> Desagrupar acciones</li>
+                            </ul>
+                            
+                            <h3>Atajos de Ejecución</h3>
+                            <ul>
+                                <li><strong>F5:</strong> Ejecutar macro</li>
+                                <li><strong>F6:</strong> Ejecutar desde la acción seleccionada</li>
+                                <li><strong>F7:</strong> Ejecutar hasta la acción seleccionada</li>
+                                <li><strong>F8:</strong> Pausar/Reanudar ejecución</li>
+                                <li><strong>F9:</strong> Detener ejecución</li>
+                                <li><strong>F10:</strong> Ejecutar paso a paso</li>
+                                <li><strong>Ctrl+F5 (Cmd+F5):</strong> Iniciar grabación</li>
+                                <li><strong>Shift+F5:</strong> Detener grabación</li>
+                            </ul>
+                            
+                            <h3>Atajos Globales</h3>
+                            <p>Estos atajos funcionan incluso cuando Autoflow no está en primer plano:</p>
+                            <ul>
+                                <li><strong>Ctrl+Alt+P (Cmd+Option+P):</strong> Reproducir la última macro ejecutada</li>
+                                <li><strong>Ctrl+Alt+S (Cmd+Option+S):</strong> Detener todas las macros en ejecución</li>
+                                <li><strong>Ctrl+Alt+R (Cmd+Option+R):</strong> Iniciar/Detener grabación rápida</li>
+                            </ul>
+                            <p>Nota: Puedes personalizar todos estos atajos desde la sección Configuración > Atajos de Teclado.</p>
+                        </section>
+
+                        <section id="examples">
+                            <h2>Ejemplos Prácticos</h2>
+                            <p>A continuación, presentamos algunos ejemplos prácticos de macros que puedes crear con Autoflow:</p>
+                            
+                            <h3>Entrada Automática de Datos</h3>
+                            <ol>
+                                <li>Iniciar aplicación de hoja de cálculo</li>
+                                <li>Esperar a que la aplicación se cargue (2 segundos)</li>
+                                <li>Repetir 20 veces:
+                                    <ul>
+                                        <li>Escribir un valor generado o desde una lista</li>
+                                        <li>Presionar Tab</li>
+                                        <li>Escribir otro valor</li>
+                                        <li>Presionar Enter</li>
+                                    </ul>
+                                </li>
+                                <li>Guardar archivo con Ctrl+S</li>
+                            </ol>
+                            
+                            <h3>Monitorización de Sitio Web</h3>
+                            <ol>
+                                <li>Abrir navegador en URL específica</li>
+                                <li>Esperar a que la página cargue</li>
+                                <li>Buscar imagen o texto específico</li>
+                                <li>Si se encuentra:
+                                    <ul>
+                                        <li>Hacer captura de pantalla</li>
+                                        <li>Enviar notificación</li>
+                                    </ul>
+                                </li>
+                                <li>Sino:
+                                    <ul>
+                                        <li>Esperar 5 minutos</li>
+                                        <li>Recargar página</li>
+                                        <li>Repetir desde paso 3</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            
+                            <h3>Procesamiento por Lotes de Imágenes</h3>
+                            <ol>
+                                <li>Abrir software de edición de imágenes</li>
+                                <li>Para cada archivo en carpeta:
+                                    <ul>
+                                        <li>Abrir archivo (Ctrl+O, seleccionar archivo, Enter)</li>
+                                        <li>Aplicar filtro o ajuste (accesos directos o navegación por menús)</li>
+                                        <li>Guardar con nuevo nombre (Ctrl+Shift+S, modificar nombre, Enter)</li>
+                                        <li>Cerrar archivo (Ctrl+W)</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            
+                            <h3>Inicio de Día Laboral</h3>
+                            <ol>
+                                <li>Abrir correo electrónico</li>
+                                <li>Abrir herramienta de gestión de proyectos</li>
+                                <li>Abrir calendario</li>
+                                <li>Abrir carpeta de documentos de trabajo</li>
+                                <li>Abrir comunicador del equipo</li>
+                                <li>Organizar ventanas en posiciones predefinidas</li>
+                            </ol>
+                            
+                            <h3>Extracción de Datos Web</h3>
+                            <ol>
+                                <li>Abrir navegador en URL específica</li>
+                                <li>Navegar a sección de datos</li>
+                                <li>Repetir para cada página:
+                                    <ul>
+                                        <li>Extraer datos mediante acciones OCR o búsqueda de elementos</li>
+                                        <li>Guardar en variable o archivo</li>
+                                        <li>Hacer clic en "Siguiente página"</li>
+                                        <li>Esperar a que cargue la nueva página</li>
+                                    </ul>
+                                </li>
+                                <li>Formatear y exportar datos recopilados</li>
+                            </ol>
+                        </section>
+
+                        <section id="troubleshooting">
+                            <h2>Solución de Problemas</h2>
+                            <p>A continuación se presentan soluciones a problemas comunes que puedes encontrar al utilizar Autoflow:</p>
+                            
+                            <h3>La Macro No Se Ejecuta</h3>
+                            <ul>
+                                <li><strong>Problema:</strong> La macro no se inicia o no hace nada.</li>
+                                <li><strong>Soluciones:</strong>
+                                    <ul>
+                                        <li>Verifica que no haya errores de sintaxis en la macro.</li>
+                                        <li>Comprueba que estás ejecutando la macro con privilegios suficientes.</li>
+                                        <li>Verifica que las aplicaciones o ventanas necesarias estén abiertas.</li>
+                                        <li>Asegúrate de que la licencia esté correctamente activada.</li>
+                                        <li>Reinicia Autoflow y/o tu sistema.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <h3>Acciones de Ratón o Teclado Inexactas</h3>
+                            <ul>
+                                <li><strong>Problema:</strong> Las acciones no ocurren en las posiciones correctas o hay errores en la entrada de teclado.</li>
+                                <li><strong>Soluciones:</strong>
+                                    <ul>
+                                        <li>Ajusta las coordenadas manualmente para mayor precisión.</li>
+                                        <li>Utiliza acciones relativas a elementos de la interfaz en lugar de coordenadas absolutas.</li>
+                                        <li>Añade esperas entre acciones para dar tiempo a que la interfaz responda.</li>
+                                        <li>Verifica que no haya cambios en la resolución de pantalla.</li>
+                                        <li>Comprueba si hay conflictos con otros programas que capturan entrada.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <h3>Búsqueda de Imagen Fallida</h3>
+                            <ul>
+                                <li><strong>Problema:</strong> Autoflow no puede encontrar las imágenes especificadas.</li>
+                                <li><strong>Soluciones:</strong>
+                                    <ul>
+                                        <li>Actualiza las capturas de imágenes para que coincidan exactamente.</li>
+                                        <li>Reduce el umbral de coincidencia (70-80% en lugar de 90-100%).</li>
+                                        <li>Utiliza imágenes más pequeñas y específicas.</li>
+                                        <li>Comprueba que no haya cambios en la resolución o tema visual.</li>
+                                        <li>Utiliza búsqueda de OCR como alternativa para texto.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <h3>Rendimiento Lento</h3>
+                            <ul>
+                                <li><strong>Problema:</strong> Las macros se ejecutan lentamente o consumen muchos recursos.</li>
+                                <li><strong>Soluciones:</strong>
+                                    <ul>
+                                        <li>Optimiza las acciones eliminando pasos innecesarios.</li>
+                                        <li>Reduce el número de operaciones de búsqueda de imagen.</li>
+                                        <li>Ajusta los tiempos de espera para que sean más precisos.</li>
+                                        <li>Cierra aplicaciones no utilizadas para liberar recursos.</li>
+                                        <li>Divide macros grandes en submacros más pequeñas.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <h3>Errores en Bucles o Condiciones</h3>
+                            <ul>
+                                <li><strong>Problema:</strong> Los bucles no terminan o las condiciones no funcionan como se esperaba.</li>
+                                <li><strong>Soluciones:</strong>
+                                    <ul>
+                                        <li>Añade condiciones de salida claras para evitar bucles infinitos.</li>
+                                        <li>Utiliza contadores de intentos para limitar las repeticiones.</li>
+                                        <li>Verifica la lógica de tus condiciones paso a paso.</li>
+                                        <li>Añade registros para depurar valores de variables.</li>
+                                        <li>Utiliza el modo paso a paso para verificar la ejecución.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <h3>Problemas de Compatibilidad</h3>
+                            <ul>
+                                <li><strong>Problema:</strong> Autoflow no funciona correctamente con ciertas aplicaciones.</li>
+                                <li><strong>Soluciones:</strong>
+                                    <ul>
+                                        <li>Ejecuta Autoflow como administrador para mayor acceso.</li>
+                                        <li>Verifica que la aplicación no tenga protecciones contra automatización.</li>
+                                        <li>Utiliza métodos alternativos (API, scripting directo) si están disponibles.</li>
+                                        <li>Actualiza Autoflow a la versión más reciente.</li>
+                                        <li>Contacta con soporte para aplicaciones específicas.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="faq">
+                            <h2>Preguntas Frecuentes</h2>
+                            
+                            <h3>¿Es necesario saber programar para usar Autoflow?</h3>
+                            <p>No, Autoflow está diseñado para ser accesible a usuarios sin experiencia en programación. La interfaz gráfica y el sistema de arrastrar y soltar permite crear macros potentes sin escribir código.</p>
+                            
+                            <h3>¿Puedo automatizar cualquier aplicación?</h3>
+                            <p>En teoría, sí, ya que Autoflow simula acciones de ratón y teclado. Sin embargo, algunas aplicaciones con seguridad avanzada o interfaces muy dinámicas pueden presentar desafíos. La mayoría de las aplicaciones de escritorio y sitios web son compatibles.</p>
+                            
+                            <h3>¿Qué ocurre si mi resolución de pantalla cambia?</h3>
+                            <p>Para mayor compatibilidad, utiliza acciones basadas en reconocimiento de imágenes o elementos de UI en lugar de coordenadas absolutas. También puedes crear macros específicas para diferentes resoluciones y activarlas condicionalmente.</p>
+                            
+                            <h3>¿Cómo puedo compartir mis macros con otros usuarios?</h3>
+                            <p>Puedes exportar tus macros en formato .afm (Autoflow Macro) desde el menú Archivo > Exportar. Otros usuarios pueden importarlas desde Archivo > Importar, siempre que tengan una licencia válida de Autoflow.</p>
+                            
+                            <h3>¿Autoflow funciona en segundo plano?</h3>
+                            <p>Sí, una vez iniciada una macro, puedes minimizar Autoflow y seguirá ejecutándose. Las macros programadas también funcionan sin necesidad de tener la interfaz abierta, siempre que el servicio de Autoflow esté ejecutándose.</p>
+                            
+                            <h3>¿Puedo grabar una macro y editarla después?</h3>
+                            <p>Absolutamente. El modo de grabación captura tus acciones y luego puedes refinarlas en el editor, añadiendo condiciones, bucles o ajustando parámetros para mayor precisión y robustez.</p>
+                            
+                            <h3>¿Las macros programadas se ejecutan si mi ordenador está apagado?</h3>
+                            <p>No, tu ordenador debe estar encendido y con la sesión iniciada para que las macros programadas se ejecuten. Sin embargo, Autoflow puede configurarse para despertar el ordenador del modo de suspensión.</p>
+                            
+                            <h3>¿Tiene Autoflow limitaciones en cuanto a la duración o complejidad de las macros?</h3>
+                            <p>No hay límites teóricos, pero macros muy largas o complejas pueden beneficiarse de ser divididas en submacros más pequeñas por razones de mantenimiento y rendimiento.</p>
+                            
+                            <h3>¿Es seguro automatizar operaciones con información sensible?</h3>
+                            <p>Autoflow opera localmente en tu equipo y no envía datos a servidores externos. Sin embargo, para información altamente sensible, considera medidas adicionales como cifrado o automatización a través de canales seguros.</p>
+                            
+                            <h3>¿Puedo actualizar a nuevas versiones sin perder mis macros?</h3>
+                            <p>Sí, Autoflow mantiene compatibilidad entre versiones y realiza copias de seguridad automáticas. En cualquier caso, te recomendamos exportar regularmente tus macros como respaldo adicional.</p>
+                            
+                            <h3>¿Qué pasa si necesito ayuda o tengo una pregunta específica?</h3>
+                            <p>Contáctanos a través de nuestro <a href="/pages/support/index.html">Centro de Soporte</a> o por email a support@infinityascend.com. También tenemos una comunidad activa de usuarios en nuestro foro donde puedes compartir ideas y soluciones.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="/assets/img/logos/infinity-ascend-logo-light.svg" alt="Infinity Ascend Software">
+                        </div>
+                        <p data-i18n="footer.description">Herramientas potentes y fáciles de usar para automatización y seguridad digital.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.products">Productos</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/products/autoflow/index.html" data-i18n="products.autoflow.title">Autoflow</a></li>
+                            <li><a href="/pages/products/bulletproof/index.html" data-i18n="products.bulletproof.title">BulletProof</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.support">Soporte</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/support/index.html" data-i18n="nav.support">Centro de Soporte</a></li>
+                            <li><a href="/pages/support/refund.html" data-i18n="footer.refunds">Reembolsos</a></li>
+                            <li><a href="/pages/legal/terms.html" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                            <li><a href="/pages/legal/privacy.html" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.contact">Contacto</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:support@infinityascend.com">support@infinityascend.com</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year">2025</span> Infinity Ascend Software. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <div class="payment-methods">
+                        <img src="/assets/img/logos/payment-paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="/assets/img/logos/payment-stripe.svg" alt="Stripe" loading="lazy">
+                        <img src="/assets/img/logos/payment-crypto.svg" alt="Cryptocurrency" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/cart.js"></script>
+</body>
+</html>

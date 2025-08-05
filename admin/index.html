@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel de Administración - Infinity Ascend Software">
+    <title>Panel de Administración | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="admin-body">
+    <div id="admin-app" class="admin-app">
+        <!-- Sidebar de navegación -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="admin-logo">
+                    <a href="/admin/index.html">
+                        <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                    </a>
+                </div>
+                <button class="sidebar-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/admin/index.html" class="nav-link active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/sales/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+                            <span>Ventas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/products/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/setters/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <span>Community Setters</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/settings/general.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="logout-link" id="logout-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-left">
+                    <h1 class="page-title">Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="period-filters">
+                        <button class="period-filter" data-period="day">Hoy</button>
+                        <button class="period-filter" data-period="week">Semana</button>
+                        <button class="period-filter active" data-period="month">Mes</button>
+                        <button class="period-filter" data-period="year">Año</button>
+                    </div>
+                    <div class="admin-profile">
+                        <img src="/assets/img/admin/avatar.jpg" alt="Admin" class="admin-avatar">
+                        <div class="admin-info">
+                            <span class="admin-name">Admin</span>
+                            <span class="admin-role">Administrador</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-dashboard">
+                <!-- Tarjetas de resumen -->
+                <section class="summary-cards">
+                    <div class="summary-card" id="total-sales">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Total de Ventas</h3>
+                            <div class="summary-value">0</div>
+                            <div class="summary-change">+0% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card" id="total-revenue">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Ingresos Totales</h3>
+                            <div class="summary-value">$0.00</div>
+                            <div class="summary-change">+0% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card" id="average-order">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Valor Promedio</h3>
+                            <div class="summary-value">$0.00</div>
+                            <div class="summary-change">+0% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card" id="active-setters">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Setters Activos</h3>
+                            <div class="summary-value">0</div>
+                            <div class="summary-change">+0% vs mes anterior</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gráficos -->
+                <section class="dashboard-charts">
+                    <div class="chart-card">
+                        <h3 class="chart-title">Ventas por Producto</h3>
+                        <div class="chart-container">
+                            <canvas id="sales-by-product"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3 class="chart-title">Ventas Mensuales</h3>
+                        <div class="chart-container">
+                            <canvas id="monthly-sales"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ventas recientes -->
+                <section class="recent-sales">
+                    <h2 class="section-title">Ventas Recientes</h2>
+                    <div class="table-responsive">
+                        <table class="admin-table" id="recent-sales-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Pedido</th>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Email</th>
+                                    <th>Productos</th>
+                                    <th>Total</th>
+                                    <th>Setter</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Los datos se cargarán dinámicamente con JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-actions">
+                        <a href="/admin/sales/index.html" class="btn btn-primary">Ver todas las ventas</a>
+                    </div>
+                </section>
+
+                <!-- Community Setters -->
+                <section class="community-setters">
+                    <h2 class="section-title">Top Community Setters</h2>
+                    <div class="table-responsive">
+                        <table class="admin-table" id="setters-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Ventas</th>
+                                    <th>Ingresos</th>
+                                    <th>Comisión</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Los datos se cargarán dinámicamente con JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-actions">
+                        <a href="/admin/setters/index.html" class="btn btn-primary">Ver todos los setters</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/admin/dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar eventos para la navegación móvil
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const adminApp = document.getElementById('admin-app');
+            
+            if (sidebarToggle && adminApp) {
+                sidebarToggle.addEventListener('click', function() {
+                    adminApp.classList.toggle('sidebar-collapsed');
+                });
+            }
+            
+            // Configurar cerrar sesión
+            const logoutButton = document.getElementById('logout-btn');
+            
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Eliminar el flag de autenticación
+                    localStorage.removeItem('admin_authenticated');
+                    
+                    // Redirigir a la página de login
+                    window.location.href = '/admin/login.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

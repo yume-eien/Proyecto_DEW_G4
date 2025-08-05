@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestión de Reembolsos - Infinity Ascend Software">
+    <title>Reembolsos | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/user.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Selector de idioma flotante -->
+       <!--  <div class="language-selector">
+            <button class="language-btn active" data-lang="en">EN</button>
+            <button class="language-btn" data-lang="es">ES</button>
+            <button class="language-btn" data-lang="fr">FR</button>
+        </div> -->
+
+        <!-- Header con navegación -->
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="/index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                            <li><a href="/pages/catalog/index.html" class="nav-link" data-i18n="nav.products">Products</a></li>
+                          <li><a href="/pages/support/index.html" class="nav-link" data-i18n="nav.support">Support</a></li>
+                            <!--   <li><a href="/pages/user/dashboard.html" class="nav-link active" data-i18n="nav.account">My Account</a></li> -->
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="cart-widget">
+                            <a href="/pages/cart.html" class="cart-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                        <button class="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Cabecera de usuario -->
+        <div class="user-header">
+            <div class="container">
+                <h1 class="page-title">Reembolsos</h1>
+                <p class="page-description">Solicita y gestiona reembolsos para tus compras.</p>
+            </div>
+        </div>
+
+        <!-- Panel de usuario -->
+        <div class="user-panel">
+            <div class="container">
+                <div class="user-panel-container">
+                    <!-- Sidebar de usuario -->
+                    <aside class="user-sidebar">
+                        <div class="user-profile">
+                            <div class="user-avatar">JD</div>
+                            <div class="user-info">
+                                <h2 class="user-name">John Doe</h2>
+                                <p class="user-email">john.doe@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <nav class="user-nav">
+                            <ul class="user-nav-list">
+                                <li class="user-nav-item">
+                                    <a href="/pages/user/dashboard.html" class="user-nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="user-nav-item">
+                                    <a href="/pages/user/purchases.html" class="user-nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                        <span>Mis Compras</span>
+                                    </a>
+                                </li>
+                                <li class="user-nav-item">
+                                    <a href="/pages/user/refunds.html" class="user-nav-link active">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"></path><path d="M12 17.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path></svg>
+                                        <span>Reembolsos</span>
+                                    </a>
+                                </li>
+                                <li class="user-nav-item">
+                                    <a href="#" class="user-nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                                        <span>Configuración</span>
+                                    </a>
+                                </li>
+                                <li class="user-nav-item">
+                                    <a href="#" class="user-nav-link logout-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span>Cerrar Sesión</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Contenido principal -->
+                    <div class="user-content">
+                        <!-- Información de política de reembolso -->
+                        <div class="dashboard-section">
+                            <div class="section-header">
+                                <h2 class="section-title">Política de Reembolso</h2>
+                            </div>
+                            <div class="section-body info-box">
+                                <p>Ofrecemos reembolsos dentro de los <strong>14 días</strong> posteriores a la compra si el software no cumple con la funcionalidad descrita o presenta problemas técnicos que nuestro equipo no puede resolver.</p>
+                                <p>Para solicitar un reembolso, simplemente haz clic en el botón "Solicitar Reembolso" junto a la compra correspondiente y completa el formulario indicando el motivo.</p>
+                                <p>Para más información, consulta nuestra <a href="/pages/legal/refund-policy.html">política de reembolso completa</a>.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Compras elegibles para reembolso -->
+                        <div class="dashboard-section">
+                            <div class="section-header">
+                                <h2 class="section-title">Compras Elegibles para Reembolso</h2>
+                                <span class="section-badge">Últimos 14 días</span>
+                            </div>
+                            
+                            <div class="purchases-table-container">
+                                <table class="purchases-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID de Compra</th>
+                                            <th>Fecha</th>
+                                            <th>Productos</th>
+                                            <th>Total</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="purchase-id">ORD-2024051701</td>
+                                            <td>17/05/2024</td>
+                                            <td>
+                                                <div class="purchase-products">
+                                                    <span class="product-badge">Autoflow</span>
+                                                </div>
+                                            </td>
+                                            <td>$49.99</td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-sm btn-outline request-refund" data-id="ORD-2024051701">Solicitar Reembolso</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Historial de solicitudes de reembolso -->
+                        <div class="dashboard-section">
+                            <div class="section-header">
+                                <h2 class="section-title">Historial de Solicitudes de Reembolso</h2>
+                            </div>
+                            
+                            <div class="purchases-table-container">
+                                <table class="purchases-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID de Solicitud</th>
+                                            <th>Compra</th>
+                                            <th>Fecha de Solicitud</th>
+                                            <th>Productos</th>
+                                            <th>Motivo</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="purchase-id">REF-2024050501</td>
+                                            <td>ORD-2024050301</td>
+                                            <td>05/05/2024</td>
+                                            <td>
+                                                <div class="purchase-products">
+                                                    <span class="product-badge">BulletProof</span>
+                                                </div>
+                                            </td>
+                                            <td>Incompatibilidad con mi sistema</td>
+                                            <td><span class="status-badge success">Aprobado</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-sm btn-outline view-refund" data-id="REF-2024050501">Ver Detalles</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="purchase-id">REF-2024042101</td>
+                                            <td>ORD-2024042001</td>
+                                            <td>21/04/2024</td>
+                                            <td>
+                                                <div class="purchase-products">
+                                                    <span class="product-badge">Autoflow</span>
+                                                </div>
+                                            </td>
+                                            <td>Funcionalidad no cumple expectativas</td>
+                                            <td><span class="status-badge warning">En revisión</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-sm btn-outline view-refund" data-id="REF-2024042101">Ver Detalles</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal de solicitud de reembolso -->
+                        <div id="refund-request-modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Solicitar Reembolso</h3>
+                                    <button class="modal-close">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="refund-form">
+                                        <div class="form-group">
+                                            <label for="order-id">ID de Compra</label>
+                                            <input type="text" id="order-id" class="form-input" readonly>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="refund-product">Producto a Reembolsar</label>
+                                            <select id="refund-product" class="form-select">
+                                                <option value="all">Todos los productos de esta compra</option>
+                                                <!-- Opciones serán cargadas dinámicamente -->
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="refund-reason">Motivo del Reembolso</label>
+                                            <select id="refund-reason" class="form-select">
+                                                <option value="">Selecciona un motivo</option>
+                                                <option value="compatibility">Problemas de compatibilidad</option>
+                                                <option value="expectations">No cumple con mis expectativas</option>
+                                                <option value="technical">Problemas técnicos</option>
+                                                <option value="performance">Problemas de rendimiento</option>
+                                                <option value="other">Otro (especificar)</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group" id="other-reason-container" style="display: none;">
+                                            <label for="other-reason">Especificar motivo</label>
+                                            <input type="text" id="other-reason" class="form-input" placeholder="Describe el motivo del reembolso">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="refund-details">Detalles adicionales</label>
+                                            <textarea id="refund-details" class="form-input" rows="4" placeholder="Proporciona información adicional que pueda ayudarnos a entender tu solicitud"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <div class="checkbox-container">
+                                                <input type="checkbox" id="terms-checkbox">
+                                                <label for="terms-checkbox">Confirmo que he leído y acepto la <a href="/pages/legal/refund-policy.html" target="_blank">política de reembolso</a>.</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-outline" id="cancel-refund">Cancelar</button>
+                                    <button class="btn btn-primary" id="submit-refund" disabled>Enviar Solicitud</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal de detalles de reembolso -->
+                        <div id="refund-details-modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Detalles de Reembolso</h3>
+                                    <button class="modal-close">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="refund-details">
+                                        <div class="refund-details-header">
+                                            <div class="refund-info">
+                                                <p><strong>ID de Solicitud:</strong> <span id="modal-refund-id">REF-2024050501</span></p>
+                                                <p><strong>Fecha de Solicitud:</strong> <span id="modal-refund-date">05/05/2024</span></p>
+                                                <p><strong>Orden Original:</strong> <span id="modal-original-order">ORD-2024050301</span></p>
+                                            </div>
+                                            <div class="refund-status">
+                                                <span class="status-badge success" id="modal-refund-status">Aprobado</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="refund-products-section">
+                                            <h4>Productos Reembolsados</h4>
+                                            <div class="refund-product-list" id="modal-refund-products">
+                                                <div class="refund-product-item">
+                                                    <div class="product-image">
+                                                        <img src="/assets/img/products/bulletproof/main-thumb.jpg" alt="BulletProof">
+                                                    </div>
+                                                    <div class="product-details">
+                                                        <h5>BulletProof</h5>
+                                                        <p class="product-license">Licencia de pago único</p>
+                                                        <p class="product-price">$39.99</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="refund-reason-section">
+                                            <h4>Motivo del Reembolso</h4>
+                                            <p id="modal-refund-reason">Incompatibilidad con mi sistema</p>
+                                            <h5>Detalles adicionales:</h5>
+                                            <p id="modal-refund-details">El software no funciona correctamente en mi ordenador con Windows 11. He intentado todas las soluciones recomendadas por el soporte técnico pero sigue fallando al iniciar.</p>
+                                        </div>
+                                        
+                                        <div class="refund-payment">
+                                            <h4>Información de Reembolso</h4>
+                                            <p><strong>Monto:</strong> <span id="modal-refund-amount">$39.99</span></p>
+                                            <p><strong>Método:</strong> <span id="modal-refund-method">Devolución a PayPal</span></p>
+                                            <p><strong>Estado:</strong> <span class="payment-status success" id="modal-refund-payment-status">Procesado el 06/05/2024</span></p>
+                                        </div>
+                                        
+                                        <div class="refund-communication">
+                                            <h4>Comunicaciones</h4>
+                                            <div class="communication-item">
+                                                <div class="communication-header">
+                                                    <span class="communication-from">Infinity Ascend Support</span>
+                                                    <span class="communication-date">05/05/2024 14:35</span>
+                                                </div>
+                                                <div class="communication-body">
+                                                    <p>Hemos revisado tu solicitud de reembolso y ha sido aprobada. El reembolso será procesado en las próximas 24 horas a través del mismo método de pago utilizado para la compra.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" id="close-details-modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="/assets/img/logos/infinity-ascend-logo-light.svg" alt="Infinity Ascend Software">
+                        </div>
+                        <p data-i18n="footer.description">Herramientas potentes y fáciles de usar para automatización y seguridad digital.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.products">Productos</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/products/autoflow/index.html" data-i18n="products.autoflow.title">Autoflow</a></li>
+                            <li><a href="/pages/products/bulletproof/index.html" data-i18n="products.bulletproof.title">BulletProof</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.support">Soporte</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/support/index.html" data-i18n="nav.support">Centro de Soporte</a></li>
+                    <!--         <li><a href="/pages/support/refund.html" data-i18n="footer.refunds">Reembolsos</a></li> -->
+                            <li><a href="/pages/legal/terms.html" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                            <li><a href="/pages/legal/privacy.html" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.contact">Contacto</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:support@infinityascend.com">support@infinityascend.com</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year">2025</span> Infinity Ascend Software. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <div class="payment-methods">
+                        <img src="/assets/img/logos/payment-paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="/assets/img/logos/payment-stripe.svg" alt="Stripe" loading="lazy">
+                        <img src="/assets/img/logos/payment-crypto.svg" alt="Cryptocurrency" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Referencias a modales
+            const requestModal = document.getElementById('refund-request-modal');
+            const detailsModal = document.getElementById('refund-details-modal');
+            const requestCloseBtn = requestModal.querySelector('.modal-close');
+            const detailsCloseBtn = detailsModal.querySelector('.modal-close');
+            const cancelRefundBtn = document.getElementById('cancel-refund');
+            const submitRefundBtn = document.getElementById('submit-refund');
+            const closeDetailsBtn = document.getElementById('close-details-modal');
+            
+            // Referencias a elementos del form
+            const orderIdInput = document.getElementById('order-id');
+            const refundReasonSelect = document.getElementById('refund-reason');
+            const otherReasonContainer = document.getElementById('other-reason-container');
+            const otherReasonInput = document.getElementById('other-reason');
+            const termsCheckbox = document.getElementById('terms-checkbox');
+            
+            // Abrir modal de solicitud de reembolso
+            const requestRefundButtons = document.querySelectorAll('.request-refund');
+            requestRefundButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const orderId = this.getAttribute('data-id');
+                    orderIdInput.value = orderId;
+                    loadOrderProducts(orderId);
+                    resetRefundForm();
+                    requestModal.style.display = 'flex';
+                });
+            });
+            
+            // Abrir modal de detalles de reembolso
+            const viewRefundButtons = document.querySelectorAll('.view-refund');
+            viewRefundButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const refundId = this.getAttribute('data-id');
+                    loadRefundDetails(refundId);
+                    detailsModal.style.display = 'flex';
+                });
+            });
+            
+            // Cerrar modales
+            requestCloseBtn.addEventListener('click', () => requestModal.style.display = 'none');
+            detailsCloseBtn.addEventListener('click', () => detailsModal.style.display = 'none');
+            cancelRefundBtn.addEventListener('click', () => requestModal.style.display = 'none');
+            closeDetailsBtn.addEventListener('click', () => detailsModal.style.display = 'none');
+            
+            // Cerrar modales al hacer clic fuera del contenido
+            window.addEventListener('click', function(event) {
+                if (event.target === requestModal) requestModal.style.display = 'none';
+                if (event.target === detailsModal) detailsModal.style.display = 'none';
+            });
+            
+            // Mostrar/ocultar campo de "otro motivo"
+            refundReasonSelect.addEventListener('change', function() {
+                if (this.value === 'other') {
+                    otherReasonContainer.style.display = 'block';
+                } else {
+                    otherReasonContainer.style.display = 'none';
+                }
+                validateForm();
+            });
+            
+            // Activar/desactivar botón de envío según validación
+            termsCheckbox.addEventListener('change', validateForm);
+            otherReasonInput.addEventListener('input', validateForm);
+            
+            // Enviar solicitud de reembolso
+            submitRefundBtn.addEventListener('click', function() {
+                // En un entorno real, esto enviaría los datos a través de una API
+                const formData = {
+                    orderId: orderIdInput.value,
+                    product: document.getElementById('refund-product').value,
+                    reason: refundReasonSelect.value === 'other' ? otherReasonInput.value : refundReasonSelect.options[refundReasonSelect.selectedIndex].text,
+                    details: document.getElementById('refund-details').value
+                };
+                
+                console.log('Enviando solicitud de reembolso:', formData);
+                
+                // Simular éxito
+                alert('Solicitud de reembolso enviada con éxito. Referencia: REF-' + Date.now());
+                requestModal.style.display = 'none';
+                
+                // En un entorno real, recargaríamos la página o actualizaríamos la UI
+                // window.location.reload();
+            });
+            
+            // Función para validar el formulario
+            function validateForm() {
+                const reasonIsValid = refundReasonSelect.value !== '' && 
+                                     (refundReasonSelect.value !== 'other' || otherReasonInput.value.trim() !== '');
+                const termsAccepted = termsCheckbox.checked;
+                
+                submitRefundBtn.disabled = !(reasonIsValid && termsAccepted);
+            }
+            
+            // Función para resetear el formulario
+            function resetRefundForm() {
+                refundReasonSelect.value = '';
+                otherReasonInput.value = '';
+                otherReasonContainer.style.display = 'none';
+                document.getElementById('refund-details').value = '';
+                termsCheckbox.checked = false;
+                submitRefundBtn.disabled = true;
+            }
+            
+            // Función para cargar productos de una orden (simulada)
+            function loadOrderProducts(orderId) {
+                // En un entorno real, esto sería una llamada a la API
+                const productSelect = document.getElementById('refund-product');
+                productSelect.innerHTML = '<option value="all">Todos los productos de esta compra</option>';
+                
+                let products = [];
+                
+                // Simulamos diferentes órdenes
+                switch(orderId) {
+                    case 'ORD-2024051701':
+                        products = [
+                            { id: 'autoflow', name: 'Autoflow' }
+                        ];
+                        break;
+                    case 'ORD-2024050301':
+                        products = [
+                            { id: 'bulletproof', name: 'BulletProof' }
+                        ];
+                        break;
+                    case 'ORD-2024042001':
+                        products = [
+                            { id: 'autoflow', name: 'Autoflow' },
+                            { id: 'bulletproof', name: 'BulletProof' }
+                        ];
+                        break;
+                }
+                
+                // Añadir productos al select
+                products.forEach(product => {
+                    const option = document.createElement('option');
+                    option.value = product.id;
+                    option.textContent = product.name;
+                    productSelect.appendChild(option);
+                });
+            }
+            
+            // Función para cargar detalles de un reembolso (simulada)
+            function loadRefundDetails(refundId) {
+                // En un entorno real, esto sería una llamada a la API
+                let refundDetails;
+                
+                // Simulamos diferentes reembolsos
+                switch(refundId) {
+                    case 'REF-2024050501':
+                        refundDetails = {
+                            id: 'REF-2024050501',
+                            date: '05/05/2024',
+                            originalOrder: 'ORD-2024050301',
+                            status: 'Aprobado',
+                            products: [
+                                {
+                                    name: 'BulletProof',
+                                    price: 39.99,
+                                    image: '/assets/img/products/bulletproof/main-thumb.jpg'
+                                }
+                            ],
+                            reason: 'Incompatibilidad con mi sistema',
+                            details: 'El software no funciona correctamente en mi ordenador con Windows 11. He intentado todas las soluciones recomendadas por el soporte técnico pero sigue fallando al iniciar.',
+                            amount: 39.99,
+                            refundMethod: 'Devolución a PayPal',
+                            refundStatus: 'Procesado el 06/05/2024',
+                            communication: [
+                                {
+                                    from: 'Infinity Ascend Support',
+                                    date: '05/05/2024 14:35',
+                                    message: 'Hemos revisado tu solicitud de reembolso y ha sido aprobada. El reembolso será procesado en las próximas 24 horas a través del mismo método de pago utilizado para la compra.'
+                                }
+                            ]
+                        };
+                        break;
+                    case 'REF-2024042101':
+                        refundDetails = {
+                            id: 'REF-2024042101',
+                            date: '21/04/2024',
+                            originalOrder: 'ORD-2024042001',
+                            status: 'En revisión',
+                            products: [
+                                {
+                                    name: 'Autoflow',
+                                    price: 49.99,
+                                    image: '/assets/img/products/autoflow/main-thumb.jpg'
+                                }
+                            ],
+                            reason: 'Funcionalidad no cumple expectativas',
+                            details: 'Las funciones de automatización no son tan avanzadas como esperaba. No puedo lograr automatizar las tareas específicas que necesito en mi flujo de trabajo.',
+                            amount: 49.99,
+                            refundMethod: 'Pendiente',
+                            refundStatus: 'No procesado',
+                            communication: [
+                                {
+                                    from: 'Infinity Ascend Support',
+                                    date: '21/04/2024 17:22',
+                                    message: 'Hemos recibido tu solicitud de reembolso. Nuestro equipo técnico está revisando tu caso y te contactaremos para ofrecerte soporte adicional o proceder con el reembolso en las próximas 48 horas.'
+                                }
+                            ]
+                        };
+                        break;
+                    default:
+                        refundDetails = {
+                            id: refundId,
+                            date: '01/01/2024',
+                            originalOrder: 'Desconocido',
+                            status: 'Desconocido',
+                            products: [],
+                            reason: 'Desconocido',
+                            details: '',
+                            amount: 0,
+                            refundMethod: 'Desconocido',
+                            refundStatus: 'Desconocido',
+                            communication: []
+                        };
+                }
+                
+                // Actualizar elementos del modal
+                document.getElementById('modal-refund-id').textContent = refundDetails.id;
+                document.getElementById('modal-refund-date').textContent = refundDetails.date;
+                document.getElementById('modal-original-order').textContent = refundDetails.originalOrder;
+                
+                const statusElement = document.getElementById('modal-refund-status');
+                statusElement.textContent = refundDetails.status;
+                statusElement.className = 'status-badge';
+                if (refundDetails.status === 'Aprobado') {
+                    statusElement.classList.add('success');
+                } else if (refundDetails.status === 'En revisión') {
+                    statusElement.classList.add('warning');
+                } else if (refundDetails.status === 'Rechazado') {
+                    statusElement.classList.add('error');
+                }
+                
+                document.getElementById('modal-refund-reason').textContent = refundDetails.reason;
+                document.getElementById('modal-refund-details').textContent = refundDetails.details;
+                document.getElementById('modal-refund-amount').textContent = '$' + refundDetails.amount.toFixed(2);
+                document.getElementById('modal-refund-method').textContent = refundDetails.refundMethod;
+                document.getElementById('modal-refund-payment-status').textContent = refundDetails.refundStatus;
+                
+                // Mostrar productos
+                const productsContainer = document.getElementById('modal-refund-products');
+                productsContainer.innerHTML = '';
+                
+                refundDetails.products.forEach(product => {
+                    const productElement = document.createElement('div');
+                    productElement.className = 'refund-product-item';
+                    productElement.innerHTML = `
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="product-details">
+                            <h5>${product.name}</h5>
+                            <p class="product-license">Licencia de pago único</p>
+                            <p class="product-price">$${product.price.toFixed(2)}</p>
+                        </div>
+                    `;
+                    productsContainer.appendChild(productElement);
+                });
+                
+                // Mostrar comunicaciones
+                const communicationContainer = document.querySelector('.communication-item');
+                communicationContainer.innerHTML = '';
+                
+                refundDetails.communication.forEach(comm => {
+                    const commElement = document.createElement('div');
+                    commElement.className = 'communication-item';
+                    commElement.innerHTML = `
+                        <div class="communication-header">
+                            <span class="communication-from">${comm.from}</span>
+                            <span class="communication-date">${comm.date}</span>
+                        </div>
+                        <div class="communication-body">
+                            <p>${comm.message}</p>
+                        </div>
+                    `;
+                    document.querySelector('.refund-communication').appendChild(commElement);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

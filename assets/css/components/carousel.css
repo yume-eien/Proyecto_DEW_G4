@@ -1,0 +1,456 @@
+/* Hero Carousel Styles - OPTIMIZADO PARA 3 SLIDES - Z-INDEX CORREGIDO */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    max-height: 800px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0a192f 0%, #1a365d 100%);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    z-index: 1; /* Base z-index para el contenedor */
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2; /* Slides en nivel 2 */
+    display: flex;
+    align-items: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 3; /* Slide activo en nivel 3 */
+}
+
+.carousel-slide.prev {
+    transform: translateX(-100%);
+    z-index: 2;
+}
+
+.video-container {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 20px;
+    z-index: 1; /* Video en nivel base */
+}
+
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg, 
+        rgba(10, 25, 47, 0.3) 0%, 
+        rgba(10, 25, 47, 0.1) 50%,
+        rgba(100, 255, 218, 0.1) 100%
+    );
+    z-index: 2; /* Overlay del video */
+    pointer-events: none;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* iframe en base */
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    z-index: 4; /* Contenido del slide por encima del video */
+    max-width: 500px;
+    color: #fff;
+    padding: 30px;
+    background: rgba(10, 25, 47, 0.85);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.slide-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #64ffda;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #64ffda 0%, #4cdbbd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.slide-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Controles del carrusel - Z-INDEX MÁXIMO CORREGIDO */
+.carousel-controls {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Z-index máximo para controles */
+    gap: 25px;
+    pointer-events: none; /* Permite que solo los elementos hijos reciban eventos */
+}
+
+.carousel-controls > * {
+    pointer-events: auto; /* Restaura eventos para elementos hijos */
+}
+
+.prev-slide, .next-slide {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(100, 255, 218, 0.5);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    color: #64ffda;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    z-index: 101; /* Botones con z-index súper alto */
+    position: relative;
+    outline: none;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background: rgba(100, 255, 218, 0.2);
+    border-color: #64ffda;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+    z-index: 102; /* Al hacer hover, z-index aún más alto */
+}
+
+.prev-slide svg, .next-slide svg {
+    width: 22px;
+    height: 22px;
+    pointer-events: none; /* Los SVG no deben interferir */
+}
+
+/* Indicadores optimizados - Z-INDEX ALTO */
+.carousel-indicators {
+    display: flex;
+    gap: 15px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    z-index: 101; /* Z-index alto para indicadores */
+    position: relative;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 102; /* Cada indicador con z-index alto */
+    outline: none;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.indicator:hover {
+    background: rgba(100, 255, 218, 0.4);
+    transform: scale(1.1);
+    z-index: 103; /* Al hacer hover, z-index máximo */
+}
+
+.indicator.active {
+    background: #64ffda;
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.3);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+    z-index: 103; /* Indicador activo con z-index máximo */
+}
+
+.indicator.active::before {
+    background: #0a192f;
+    width: 4px;
+    height: 4px;
+}
+
+/* Mejoras específicas para 3 slides */
+.carousel-slide:nth-child(1) .slide-content {
+    animation-delay: 0.2s;
+}
+
+.carousel-slide:nth-child(2) .slide-content {
+    animation-delay: 0.3s;
+}
+
+.carousel-slide:nth-child(3) .slide-content {
+    animation-delay: 0.4s;
+}
+
+/* Responsive mejorado para 3 slides */
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 65vh;
+        min-height: 450px;
+    }
+
+    .slide-content {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+        padding: 25px;
+        z-index: 4; /* Mantener z-index en mobile */
+    }
+
+    .slide-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .slide-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .slide-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .carousel-controls {
+        gap: 20px;
+        z-index: 100; /* Mantener z-index alto en mobile */
+    }
+
+    .prev-slide, .next-slide {
+        width: 45px;
+        height: 45px;
+        z-index: 101; /* Mantener z-index alto en mobile */
+    }
+
+    .carousel-indicators {
+        gap: 12px;
+        padding: 8px 16px;
+        z-index: 101; /* Mantener z-index alto en mobile */
+    }
+
+    .indicator {
+        width: 12px;
+        height: 12px;
+        z-index: 102; /* Mantener z-index alto en mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-carousel {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .video-container {
+        margin: 15px;
+    }
+    
+    .carousel-controls {
+        bottom: 20px;
+        gap: 15px;
+        z-index: 100; /* Mantener z-index alto en mobile pequeño */
+    }
+    
+    .prev-slide, .next-slide {
+        width: 40px;
+        height: 40px;
+        z-index: 101; /* Mantener z-index alto en mobile pequeño */
+    }
+
+    .prev-slide svg, .next-slide svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .slide-content {
+        padding: 20px;
+        z-index: 4; /* Mantener z-index del contenido */
+    }
+
+    .slide-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .carousel-indicators {
+        gap: 10px;
+        padding: 6px 12px;
+        z-index: 101; /* Mantener z-index alto en mobile pequeño */
+    }
+
+    .indicator {
+        z-index: 102; /* Mantener z-index alto en mobile pequeño */
+    }
+}
+
+/* Animaciones mejoradas */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-slide.active .slide-content {
+    animation: slideInFromLeft 0.8s ease-out 0.3s both;
+}
+
+.carousel-slide.active .slide-actions {
+    animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+/* Estados de carga */
+.carousel-slide:not(.active) iframe {
+    opacity: 0.7;
+}
+
+.carousel-slide.active iframe {
+    opacity: 1;
+}
+
+/* Mejoras de performance */
+.carousel-slide {
+    will-change: transform, opacity;
+}
+
+.indicator, .prev-slide, .next-slide {
+    will-change: transform;
+}
+
+/* Estados de focus mejorados para accesibilidad - Z-INDEX ALTO */
+.prev-slide:focus, .next-slide:focus, .indicator:focus {
+    outline: 2px solid #64ffda;
+    outline-offset: 2px;
+    z-index: 104; /* Z-index máximo para elementos con focus */
+}
+
+/* Indicador de progreso para autoplay - Z-INDEX ALTO */
+.carousel-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #64ffda 0%, #4cdbbd 100%);
+    z-index: 99; /* Z-index alto pero menor que controles */
+    transition: width 0.1s linear;
+    pointer-events: none;
+}
+
+/* Efectos de hover en el contenido */
+.carousel-slide:hover .video-container::after {
+    background: linear-gradient(
+        45deg, 
+        rgba(10, 25, 47, 0.2) 0%, 
+        rgba(10, 25, 47, 0.05) 50%,
+        rgba(100, 255, 218, 0.15) 100%
+    );
+}
+
+/* SOLUCIÓN ADICIONAL: Asegurar que nada interfiera con los controles */
+.hero-carousel * {
+    box-sizing: border-box;
+}
+
+/* Prevenir interferencias de otros elementos */
+.hero-carousel .carousel-controls,
+.hero-carousel .carousel-controls *,
+.hero-carousel .prev-slide,
+.hero-carousel .next-slide,
+.hero-carousel .indicator {
+    position: relative !important;
+    pointer-events: auto !important;
+}
+
+/* Asegurar que los controles estén siempre visibles */
+.carousel-controls {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: flex !important;
+}

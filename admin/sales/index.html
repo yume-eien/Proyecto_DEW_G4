@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestión de Ventas - Infinity Ascend Software">
+    <title>Gestión de Ventas | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="admin-body">
+    <div id="admin-app" class="admin-app">
+        <!-- Sidebar de navegación -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="admin-logo">
+                    <a href="/admin/index.html">
+                        <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                    </a>
+                </div>
+                <button class="sidebar-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/admin/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/sales/index.html" class="nav-link active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+                            <span>Ventas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/products/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/setters/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <span>Community Setters</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/settings/general.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="logout-link" id="logout-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-left">
+                    <h1 class="page-title">Gestión de Ventas</h1>
+                </div>
+                <div class="header-right">
+                    <div class="period-filters">
+                        <button class="period-filter" data-period="day">Hoy</button>
+                        <button class="period-filter" data-period="week">Semana</button>
+                        <button class="period-filter active" data-period="month">Mes</button>
+                        <button class="period-filter" data-period="year">Año</button>
+                        <button class="period-filter" data-period="custom">Personalizado</button>
+                    </div>
+                    <div class="admin-profile">
+                        <img src="/assets/img/admin/avatar.jpg" alt="Admin" class="admin-avatar">
+                        <div class="admin-info">
+                            <span class="admin-name">Admin</span>
+                            <span class="admin-role">Administrador</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-dashboard">
+                <!-- Resumen de ventas -->
+                <section class="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Total de Ventas</h3>
+                            <div class="summary-value">2,547</div>
+                            <div class="summary-change positive">+12.3% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Ingresos Totales</h3>
+                            <div class="summary-value">$124,859.95</div>
+                            <div class="summary-change positive">+8.7% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12"></path><path d="M4 14h9"></path><path d="M4 6h16"></path><path d="M4 18h6"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Valor Promedio</h3>
+                            <div class="summary-value">$49.01</div>
+                            <div class="summary-change negative">-2.1% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Nuevos Clientes</h3>
+                            <div class="summary-value">985</div>
+                            <div class="summary-change positive">+15.2% vs mes anterior</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gráficos de ventas -->
+                <section class="dashboard-charts">
+                    <div class="chart-card">
+                        <h3 class="chart-title">Ventas por Día</h3>
+                        <div class="chart-container">
+                            <canvas id="daily-sales-chart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Filtros y búsqueda -->
+                <section class="sales-filters">
+                    <div class="filters-grid">
+                        <div class="search-container">
+                            <input type="text" placeholder="Buscar por ID, cliente, email..." class="form-input">
+                        </div>
+                        <div class="filter-container">
+                            <select class="form-select">
+                                <option value="">Todos los productos</option>
+                                <option value="autoflow">Autoflow</option>
+                                <option value="bulletproof">BulletProof</option>
+                            </select>
+                        </div>
+                        <div class="filter-container">
+                            <select class="form-select">
+                                <option value="">Todos los setters</option>
+                                <option value="direct">Directo (sin setter)</option>
+                                <option value="setter1">Maria Rodriguez</option>
+                                <option value="setter2">Carlos Mendez</option>
+                            </select>
+                        </div>
+                        <div class="filter-container">
+                            <select class="form-select">
+                                <option value="">Estado de pago</option>
+                                <option value="completed">Completado</option>
+                                <option value="pending">Pendiente</option>
+                                <option value="failed">Fallido</option>
+                                <option value="refunded">Reembolsado</option>
+                            </select>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="btn btn-primary">Aplicar Filtros</button>
+                            <button class="btn btn-outline">Limpiar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabla de ventas -->
+                <section class="sales-table-section">
+                    <div class="table-responsive">
+                        <table class="admin-table" id="sales-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Pedido</th>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Email</th>
+                                    <th>Productos</th>
+                                    <th>Total</th>
+                                    <th>Setter</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ORD-2025051501</td>
+                                    <td>15/05/2025 10:23</td>
+                                    <td>John Doe</td>
+                                    <td>john.doe@example.com</td>
+                                    <td>Autoflow</td>
+                                    <td>$49.99</td>
+                                    <td>Maria Rodriguez</td>
+                                    <td><span class="status-badge success">Completado</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-sale" data-id="ORD-2025051501">Ver</button>
+                                            <button class="btn btn-sm btn-outline send-key" data-id="ORD-2025051501">Reenviar Key</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ORD-2025051502</td>
+                                    <td>15/05/2025 11:12</td>
+                                    <td>Alice Smith</td>
+                                    <td>alice.smith@example.com</td>
+                                    <td>BulletProof</td>
+                                    <td>$39.99</td>
+                                    <td>-</td>
+                                    <td><span class="status-badge success">Completado</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-sale" data-id="ORD-2025051502">Ver</button>
+                                            <button class="btn btn-sm btn-outline send-key" data-id="ORD-2025051502">Reenviar Key</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ORD-2025051503</td>
+                                    <td>15/05/2025 14:45</td>
+                                    <td>Robert Johnson</td>
+                                    <td>robert.johnson@example.com</td>
+                                    <td>Autoflow, BulletProof</td>
+                                    <td>$89.98</td>
+                                    <td>Carlos Mendez</td>
+                                    <td><span class="status-badge success">Completado</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-sale" data-id="ORD-2025051503">Ver</button>
+                                            <button class="btn btn-sm btn-outline send-key" data-id="ORD-2025051503">Reenviar Key</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ORD-2025051504</td>
+                                    <td>15/05/2025 16:18</td>
+                                    <td>Sarah Williams</td>
+                                    <td>sarah.williams@example.com</td>
+                                    <td>Autoflow</td>
+                                    <td>$49.99</td>
+                                    <td>Maria Rodriguez</td>
+                                    <td><span class="status-badge warning">Pendiente</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-sale" data-id="ORD-2025051504">Ver</button>
+                                            <button class="btn btn-sm btn-primary complete-payment" data-id="ORD-2025051504">Completar Pago</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ORD-2025051402</td>
+                                    <td>14/05/2025 16:33</td>
+                                    <td>Emma Williams</td>
+                                    <td>emma.williams@example.com</td>
+                                    <td>Autoflow</td>
+                                    <td>$49.99</td>
+                                    <td>Maria Rodriguez</td>
+                                    <td><span class="status-badge error">Fallido</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-sale" data-id="ORD-2025051402">Ver</button>
+                                            <button class="btn btn-sm btn-primary retry-payment" data-id="ORD-2025051402">Reintentar Pago</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ORD-2025051401</td>
+                                    <td>14/05/2025 09:15</td>
+                                    <td>Michael Brown</td>
+                                    <td>michael.brown@example.com</td>
+                                    <td>BulletProof</td>
+                                    <td>$39.99</td>
+                                    <td>-</td>
+                                    <td><span class="status-badge info">Reembolsado</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-sale" data-id="ORD-2025051401">Ver</button>
+                                            <button class="btn btn-sm btn-outline view-refund" data-id="ORD-2025051401">Ver Reembolso</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-controls">
+                        <div class="pagination-info">
+                            Mostrando <span>1-6</span> de <span>2,547</span> resultados
+                        </div>
+                        <div class="pagination-buttons">
+                            <button class="btn btn-sm btn-outline" disabled>Anterior</button>
+                            <button class="btn btn-sm btn-outline active">1</button>
+                            <button class="btn btn-sm btn-outline">2</button>
+                            <button class="btn btn-sm btn-outline">3</button>
+                            <span>...</span>
+                            <button class="btn btn-sm btn-outline">425</button>
+                            <button class="btn btn-sm btn-outline">Siguiente</button>
+                        </div>
+                        <div class="pagination-options">
+                            <select class="form-select form-select-sm">
+                                <option value="10">10 por página</option>
+                                <option value="25">25 por página</option>
+                                <option value="50">50 por página</option>
+                                <option value="100">100 por página</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Enlaces directos -->
+                <section class="quick-links">
+                    <div class="quick-links-grid">
+                        <a href="/admin/sales/refunds.html" class="quick-link-card">
+                            <div class="quick-link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M21.5 22v-6h-6"></path><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2"></path></svg>
+                            </div>
+                            <div class="quick-link-content">
+                                <h3 class="quick-link-title">Gestión de Reembolsos</h3>
+                                <p class="quick-link-description">Ver y gestionar solicitudes de reembolso</p>
+                            </div>
+                        </a>
+                        <a href="#" class="quick-link-card">
+                            <div class="quick-link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            </div>
+                            <div class="quick-link-content">
+                                <h3 class="quick-link-title">Exportar Reportes</h3>
+                                <p class="quick-link-description">Descargar reportes de ventas en CSV o PDF</p>
+                            </div>
+                        </a>
+                        <a href="#" class="quick-link-card">
+                            <div class="quick-link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                            </div>
+                            <div class="quick-link-content">
+                                <h3 class="quick-link-title">Análisis de Ventas</h3>
+                                <p class="quick-link-description">Estadísticas detalladas y tendencias</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/admin/sales.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar eventos para la navegación móvil
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const adminApp = document.getElementById('admin-app');
+            
+            if (sidebarToggle && adminApp) {
+                sidebarToggle.addEventListener('click', function() {
+                    adminApp.classList.toggle('sidebar-collapsed');
+                });
+            }
+            
+            // Configurar cerrar sesión
+            const logoutButton = document.getElementById('logout-btn');
+            
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Eliminar el flag de autenticación
+                    localStorage.removeItem('admin_authenticated');
+                    
+                    // Redirigir a la página de login
+                    window.location.href = '/admin/login.html';
+                });
+            }
+            
+            // Gráfico de ventas diarias
+            const dailySalesCtx = document.getElementById('daily-sales-chart');
+            if (dailySalesCtx) {
+                const dailySalesData = {
+                    labels: ['1 May', '2 May', '3 May', '4 May', '5 May', '6 May', '7 May', '8 May', '9 May', '10 May', '11 May', '12 May', '13 May', '14 May', '15 May'],
+                    datasets: [{
+                        label: 'Ventas',
+                        data: [65, 72, 86, 81, 56, 55, 60, 70, 75, 80, 85, 90, 95, 100, 110],
+                        backgroundColor: 'rgba(0, 119, 255, 0.1)',
+                        borderColor: 'rgba(0, 119, 255, 1)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    }]
+                };
+                
+                new Chart(dailySalesCtx, {
+                    type: 'line',
+                    data: dailySalesData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value;
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.dataset.label}: ${context.raw} ventas`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Configurar eventos para los botones de acciones
+            const viewButtons = document.querySelectorAll('.view-sale');
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const saleId = this.getAttribute('data-id');
+                    alert(`Ver venta: ${saleId}`);
+                });
+            });
+            
+            const sendKeyButtons = document.querySelectorAll('.send-key');
+            sendKeyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const saleId = this.getAttribute('data-id');
+                    alert(`Reenviar key para venta: ${saleId}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

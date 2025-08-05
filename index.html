@@ -1,121 +1,338 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licencias de Software - Tech Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Infinity Ascend Software - Herramientas potentes y fáciles de usar para automatización y seguridad digital">
+    <title>Infinity Ascend Software | Eficiencia y Seguridad Digital</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components/carousel.css">
+    <link rel="icon" href="assets/img/logos/favicon.ico" type="image/x-icon">
+    <!-- Precargar videos para optimización -->
+    <link rel="preload" href="assets/videos/hero-carousel/autoflow-promo.webm" as="video" type="video/webm">
 </head>
 <body>
-
-    <header>
-        <nav class="top-nav">
-            <div class="logo">
-                <a href="#">Tech Solutions</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Windows</a></li>
-                <li><a href="#">Office</a></li>
-                <li><a href="#">Antivirus</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="banner-container">
-            <div class="banner-slider">
-                <img src="https://placehold.co/1200x400/007BFF/FFFFFF?text=Windows+11+Pro" alt="Banner de Windows 11" class="slide active">
-                <img src="https://placehold.co/1200x400/17A2B8/FFFFFF?text=Office+365" alt="Banner de Office 365" class="slide">
-                <img src="https://placehold.co/1200x400/28A745/FFFFFF?text=Ofertas+Especiales" alt="Banner de Ofertas" class="slide">
-            </div>
-            <button class="banner-nav prev" id="prevBtn">&#10094;</button>
-            <button class="banner-nav next" id="nextBtn">&#10095;</button>
-        </section>
-
-        <section class="product-section">
-            <h2>Nuestros Productos</h2>
-            <div class="product-grid">
-                <div class="product-card" data-id="1" data-name="Windows 11 Pro" data-price="199.99">
-                    <img src="https://placehold.co/300x200/007BFF/FFFFFF?text=Windows+11" alt="Logo de Windows 11">
-                    <h3>Windows 11 Pro</h3>
-                    <p>El sistema operativo más avanzado de Microsoft, ideal para profesionales y empresas.</p>
-                    <div class="price">$199.99</div>
-                    <button class="buy-button">Añadir al carrito</button>
-                </div>
-                <div class="product-card" data-id="2" data-name="Microsoft 365 Personal" data-price="69.99">
-                    <img src="https://placehold.co/300x200/17A2B8/FFFFFF?text=Office+365" alt="Logo de Office 365">
-                    <h3>Microsoft 365 Personal</h3>
-                    <p>Incluye Word, Excel, PowerPoint y Outlook, con 1TB de almacenamiento en la nube.</p>
-                    <div class="price">$69.99/año</div>
-                    <button class="buy-button">Añadir al carrito</button>
-                </div>
-                <div class="product-card" data-id="3" data-name="Windows Server 2022" data-price="499.99">
-                    <img src="https://placehold.co/300x200/007BFF/FFFFFF?text=Windows+Server" alt="Logo de Windows Server">
-                    <h3>Windows Server 2022</h3>
-                    <p>La plataforma ideal para construir una infraestructura de aplicaciones y servicios conectados.</p>
-                    <div class="price">$499.99</div>
-                    <button class="buy-button">Añadir al carrito</button>
-                </div>
-                <div class="product-card" data-id="4" data-name="Office Hogar y Empresas 2021" data-price="249.99">
-                    <img src="https://placehold.co/300x200/17A2B8/FFFFFF?text=Office+2021" alt="Logo de Office 2021">
-                    <h3>Office Hogar y Empresas 2021</h3>
-                    <p>Compra de pago único con las aplicaciones clásicas para un solo equipo PC o Mac.</p>
-                    <div class="price">$249.99</div>
-                    <button class="buy-button">Añadir al carrito</button>
+    <div id="app" class="app">
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./assets/img/imagenes/logo.png" alt="Infinity Ascend Software" class="logo-img">
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                            <li><a href="pages/catalog/index.html" class="nav-link" data-i18n="nav.products">Products</a></li>
+                            <li><a href="pages/support/index.html" class="nav-link" data-i18n="nav.support">Support</a></li>
+             <!--                <li><a href="pages/user/dashboard.html" class="nav-link" data-i18n="nav.account">My Account</a></li> -->
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="cart-widget">
+                            <a href="pages/cart.html" class="cart-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                        <button class="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </header>
 
-    <div class="cart-modal">
-        <div class="cart-content">
-            <span class="close-cart">&times;</span>
-            <h2>Tu Carrito</h2>
-            <div id="cart-items">
-                <!-- Los artículos del carrito se insertarán aquí -->
+        <main>
+            <!-- Hero Carousel con 3 videos -->
+            <section class="hero-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slides">
+                        <!-- Slide 1: Autoflow -->
+                        <div class="carousel-slide active" data-product="autoflow">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/SXJJ1YzPkEk?autoplay=1&mute=1&loop=1&playlist=SXJJ1YzPkEk&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1" 
+                                    title="Autoflow Demo" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="slide-content">
+                                <h2 data-i18n="products.autoflow.title">Autoflow</h2>
+                                <p data-i18n="products.autoflow.shortDesc">Automatiza tus tareas repetitivas con facilidad ilimitada. Incrementa tu productividad hasta 10x con nuestro sistema inteligente.</p>
+                                <div class="slide-actions">
+                                    <a href="pages/products/autoflow/index.html" class="btn btn-primary" data-i18n="buttons.details">Ver detalles</a>
+                                    <button class="btn btn-secondary add-to-cart" data-product="autoflow" data-i18n="buttons.addToCart">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2: BulletProof -->
+                        <div class="carousel-slide" data-product="bulletproof">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/_Oj5adR5wBo?autoplay=1&mute=1&loop=1&playlist=_Oj5adR5wBo&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1" 
+                                    title="BulletProof Demo" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="slide-content">
+                                <h2 data-i18n="products.bulletproof.title">BulletProof</h2>
+                                <p data-i18n="products.bulletproof.shortDesc">Contraseñas extremadamente seguras y fáciles de gestionar. Protección de nivel militar para tus datos más importantes.</p>
+                                <div class="slide-actions">
+                                    <a href="pages/products/bulletproof/index.html" class="btn btn-primary" data-i18n="buttons.details">Ver detalles</a>
+                                    <button class="btn btn-secondary add-to-cart" data-product="bulletproof" data-i18n="buttons.addToCart">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Slide 3: SecureVault -->
+                        <div class="carousel-slide" data-product="securevault">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/WqdSLNYVnSk?autoplay=1&mute=1&loop=1&playlist=WqdSLNYVnSk&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1" 
+                                    title="SecureVault Demo" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="slide-content">
+                                <h2 data-i18n="products.securevault.title">BlueVault</h2>
+                                <p data-i18n="products.securevault.shortDesc">Almacenamiento ultra-seguro para tus archivos más importantes. Cifrado militar y acceso desde cualquier dispositivo.</p>
+                                <div class="slide-actions">
+                                    <a href="pages/products/securevault/index.html" class="btn btn-primary" data-i18n="buttons.details">Ver detalles</a>
+                                    <button class="btn btn-secondary add-to-cart" data-product="securevault" data-i18n="buttons.addToCart">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controles del carrusel -->
+                    <div class="carousel-controls">
+                        <button class="prev-slide" aria-label="Anterior">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <div class="carousel-indicators">
+                            <button class="indicator active" data-slide="0" aria-label="Slide 1 - Autoflow"></button>
+                            <button class="indicator" data-slide="1" aria-label="Slide 2 - BulletProof"></button>
+                            <button class="indicator" data-slide="2" aria-label="Slide 3 - SecureVault"></button>
+                        </div>
+                        <button class="next-slide" aria-label="Siguiente">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sección de características -->
+            <section class="features-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="sections.features.title">¿Por qué elegir Infinity Ascend?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"></path><path d="M2 20h20"></path><path d="M14 12v.01"></path></svg>
+                            </div>
+                            <h3 data-i18n="sections.features.oneTime.title">Pago único</h3>
+                            <p data-i18n="sections.features.oneTime.desc">Sin suscripciones mensuales. Paga una vez y utiliza el software para siempre.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h3 data-i18n="sections.features.security.title">Seguridad garantizada</h3>
+                            <p data-i18n="sections.features.security.desc">Algoritmos de encriptación avanzados para proteger tus datos en todo momento.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9"></path><path d="M18 2v8l-3-3 -3 3V2"></path></svg>
+                            </div>
+                            <h3 data-i18n="sections.features.updates.title">Actualizaciones gratuitas</h3>
+                            <p data-i18n="sections.features.updates.desc">Recibe todas las actualizaciones de la versión que compres sin costo adicional.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Catálogo de productos -->
+            <section class="products-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="sections.products.title">Nuestros Productos</h2>
+                    <div class="products-grid">
+                        <!-- Autoflow -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="./assets/img/imagenes/auto.png" alt="Autoflow Software" loading="lazy">
+                            </div>
+                            <div class="product-content">
+                                <h3 data-i18n="products.autoflow.title">Autoflow</h3>
+                                <p class="product-price">$99.99</p>
+                                <p class="product-description" data-i18n="products.autoflow.description">Software de automatización masiva que te permite definir acciones, velocidad y frecuencia de manera intuitiva.</p>
+                                <div class="product-actions">
+                                    <a href="pages/products/autoflow/index.html" class="btn btn-outline" data-i18n="buttons.learnMore">Saber más</a>
+                                    <button class="btn btn-primary add-to-cart" data-product="autoflow" data-i18n="buttons.addToCart">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- BulletProof -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="./assets/img/imagenes/bule.png" alt="BulletProof Software" loading="lazy">
+                            </div>
+                            <div class="product-content">
+                                <h3 data-i18n="products.bulletproof.title">BulletProof</h3>
+                                <p class="product-price">$19.99</p>
+                                <p class="product-description" data-i18n="products.bulletproof.description">Gestor y generador de contraseñas con mínimo 300 bits de seguridad, imposibles de hackear.</p>
+                                <div class="product-actions">
+                                    <a href="pages/products/bulletproof/index.html" class="btn btn-outline" data-i18n="buttons.learnMore">Saber más</a>
+                                    <button class="btn btn-primary add-to-cart" data-product="bulletproof" data-i18n="buttons.addToCart">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bluebeam -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="./assets/img/imagenes/blu.png" alt="Bluebeam Software" loading="lazy">
+                            </div>
+                            <div class="product-content">
+                                <h3 data-i18n="products.bluebeam.title">Bluebeam</h3>
+                                <p class="product-price">$60.99</p>
+                                <p class="product-description" data-i18n="products.bluebeam.description">Software
+                                    orientado a la gestión documental y colaboración en proyectos , con marcado digital
+                                    y control de flujos de trabajo.
+                                </p>
+                                <div class="product-actions">
+                                    <a href="pages/products/bluebeam/index.html" class="btn btn-outline"
+                                        data-i18n="buttons.learnMore">Ver detalles</a>
+                                    <button class="btn btn-primary add-to-cart" data-product="bluebeam"
+                                        data-i18n="buttons.addToCart">Agregar <i
+                                            class="fa-solid fa-cart-shopping"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de testimonios -->
+            <section class="testimonials-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="sections.testimonials.title">Lo que dicen nuestros clientes
+                    </h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                 <p>"AutoFlow ha transformado mi día a día, ahorrando al menos 5 horas semanales automatizando tareas repetitivas. ¡Es una inversión totalmente justificada!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Carlos Méndez</p>
+                                <p class="author-role">Analista de Marketing Digital</p>
+                                   <div class="testimonial-avatar">
+                    <img src="./assets/img/imagenes/A.png" alt="Imagen de Carlos" />
+                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                  <p>"Como administrador de sistemas, BulletProof se ha convertido en mi herramienta indispensable. Nunca había sentido tanta seguridad con las contraseñas."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Sophie Laurent</p>
+                                <p class="author-role">IT Manager</p>
+                                   <div class="testimonial-avatar">
+                    <img src="./assets/img/imagenes/B.png" alt="Imagen de Carlos" />
+                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                 <p>"Bluebeam ha mejorado la gestión de documentos y la colaboración en proyectos de forma increíble. ¡Ahora nuestros equipos trabajan más rápido y con mayor precisión!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Marcos Casas</p>
+                                <p class="author-role">CTO</p>
+                                   <div class="testimonial-avatar">
+                    <img src="./assets/img/imagenes/C.png" alt="Imagen de Carlos" />
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="assets/img/imagenes/logo.png" alt="Infinity Ascend Software">
+                        </div>
+                        <p data-i18n="footer.description">Herramientas potentes y fáciles de usar para automatización y seguridad digital.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.products">Productos</h4>
+                        <ul class="footer-links">
+                            <li><a href="pages/products/autoflow/index.html" data-i18n="products.autoflow.title">Autoflow</a></li>
+                            <li><a href="pages/products/bulletproof/index.html" data-i18n="products.bulletproof.title">BulletProof</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.support">Soporte</h4>
+                        <ul class="footer-links">
+                            <li><a href="pages/support/index.html" data-i18n="nav.support">Centro de Soporte</a></li>
+                          <!--   <li><a href="pages/support/refund.html" data-i18n="footer.refunds">Reembolsos</a></li> -->
+                            <li><a href="pages/legal/terms.html" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                            <li><a href="pages/legal/privacy.html" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.contact">Contacto</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:support@infinityascend.com">support@infinityascend.com</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year">2025</span> Infinity Ascend Software. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <div class="payment-methods">
+                        <img src="assets/img/logos/payment-paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="assets/img/logos/payment-stripe.svg" alt="Stripe" loading="lazy">
+                        <img src="assets/img/logos/payment-crypto.svg" alt="Cryptocurrency" loading="lazy">
+                    </div>
+                </div>
             </div>
-            <div class="cart-total">
-                <strong>Total: $<span id="cart-total-amount">0.00</span></strong>
-            </div>
-            <button class="checkout-button">Finalizar Compra</button>
-        </div>
+        </footer>
     </div>
 
-    </div>
-    <div class="whatsapp-container">
-        <a href="https://wa.me/51983412557" target="_blank" id="whatsappLink">
-            <img src="/imagenes/whatsapp.png" alt="WhatsApp" id="whatsappIcon">
-        </a>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Tech Solutions. Todos los derechos reservados.</p>
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com/" target="_blank">
-                <img class="icono-redes" src="/imagenes/FACEBOOK.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <img class="icono-redes" src="/imagenes/INSTAGRAM.png" alt="Instagram">
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-                <img class="icono-redes" src="/imagenes/YOUTUBE.png" alt="youtube">
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-                <img class="icono-redes" src="/imagenes/TIK TOK.png" alt="tik tok">
-            </a>
-        </div>
-    </footer>
-
-    <script src="./js/app.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/components/video-carousel.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
 </html>

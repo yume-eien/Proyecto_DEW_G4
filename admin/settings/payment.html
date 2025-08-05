@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configuración de Pagos - Infinity Ascend Software">
+    <title>Configuración de Pagos | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+</head>
+<body class="admin-body">
+    <div id="admin-app" class="admin-app">
+        <!-- Sidebar de navegación -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="admin-logo">
+                    <a href="/admin/index.html">
+                        <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                    </a>
+                </div>
+                <button class="sidebar-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/admin/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/sales/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+                            <span>Ventas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/products/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/setters/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <span>Community Setters</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/settings/general.html" class="nav-link active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="logout-link" id="logout-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-left">
+                    <h1 class="page-title">Configuración de Pagos</h1>
+                </div>
+                <div class="header-right">
+                    <div class="admin-profile">
+                        <img src="/assets/img/admin/avatar.jpg" alt="Admin" class="admin-avatar">
+                        <div class="admin-info">
+                            <span class="admin-name">Admin</span>
+                            <span class="admin-role">Administrador</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-dashboard">
+                <!-- Menú de configuración -->
+                <section class="settings-menu">
+                    <div class="settings-tabs">
+                        <a href="/admin/settings/general.html" class="settings-tab">General</a>
+                        <a href="/admin/settings/payment.html" class="settings-tab active">Pagos</a>
+                        <a href="#" class="settings-tab">Emails</a>
+                        <a href="#" class="settings-tab">Usuarios</a>
+                        <a href="#" class="settings-tab">Integración</a>
+                    </div>
+                </section>
+
+                <!-- Formularios de configuración -->
+                <section class="settings-forms">
+                    <form id="payment-settings-form">
+                        <!-- Configuración general de pagos -->
+                        <div class="settings-card">
+                            <h2 class="settings-title">Configuración General de Pagos</h2>
+                            <div class="form-group">
+                                <label for="primary-currency">Moneda Principal</label>
+                                <select id="primary-currency" name="primary-currency" class="form-select">
+                                    <option value="USD" selected>USD - Dólar Estadounidense</option>
+                                    <option value="EUR">EUR - Euro</option>
+                                    <option value="GBP">GBP - Libra Esterlina</option>
+                                    <option value="MXN">MXN - Peso Mexicano</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tax-rate">Tasa de Impuesto (%)</label>
+                                <input type="number" id="tax-rate" name="tax-rate" class="form-input" value="0" min="0" max="100" step="0.01">
+                                <small class="form-help">Deja en 0 si los precios ya incluyen impuestos o si no aplican</small>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="auto-calculate-tax" name="auto-calculate-tax" class="checkbox-input" checked>
+                                    <label for="auto-calculate-tax" class="checkbox-label">Calcular impuestos automáticamente según el país del cliente</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="allow-coupons" name="allow-coupons" class="checkbox-input" checked>
+                                    <label for="allow-coupons" class="checkbox-label">Permitir cupones de descuento</label>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Configuración de PayPal -->
+                        <div class="settings-card">
+                            <h2 class="settings-title">Configuración de PayPal</h2>
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="enable-paypal" name="enable-paypal" class="checkbox-input" checked>
+                                    <label for="enable-paypal" class="checkbox-label">Habilitar PayPal como método de pago</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="paypal-mode">Modo</label>
+                                <select id="paypal-mode" name="paypal-mode" class="form-select">
+                                    <option value="sandbox">Sandbox (Pruebas)</option>
+                                    <option value="live" selected>Live (Producción)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="paypal-client-id">Client ID</label>
+                                <input type="text" id="paypal-client-id" name="paypal-client-id" class="form-input" value="Abc123XyzClientID">
+                            </div>
+                            <div class="form-group">
+                                <label for="paypal-secret">Client Secret</label>
+                                <input type="password" id="paypal-secret" name="paypal-secret" class="form-input" value="************">
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="button" class="btn btn-outline test-connection-btn" data-provider="paypal">Probar Conexión</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Configuración de Stripe -->
+                        <div class="settings-card">
+                            <h2 class="settings-title">Configuración de Stripe</h2>
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="enable-stripe" name="enable-stripe" class="checkbox-input" checked>
+                                    <label for="enable-stripe" class="checkbox-label">Habilitar Stripe como método de pago</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="stripe-mode">Modo</label>
+                                <select id="stripe-mode" name="stripe-mode" class="form-select">
+                                    <option value="test">Test</option>
+                                    <option value="live" selected>Live</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="stripe-publishable-key">Publishable Key</label>
+                                <input type="text" id="stripe-publishable-key" name="stripe-publishable-key" class="form-input" value="pk_live_SamplePublishableKey">
+                            </div>
+                            <div class="form-group">
+                                <label for="stripe-secret-key">Secret Key</label>
+                                <input type="password" id="stripe-secret-key" name="stripe-secret-key" class="form-input" value="************">
+                            </div>
+                            <div class="form-group">
+                                <label for="stripe-webhook-secret">Webhook Secret</label>
+                                <input type="password" id="stripe-webhook-secret" name="stripe-webhook-secret" class="form-input" value="************">
+                                <small class="form-help">Necesario para recibir actualizaciones de estado de los pagos</small>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="button" class="btn btn-outline test-connection-btn" data-provider="stripe">Probar Conexión</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Configuración de Criptomonedas -->
+                        <div class="settings-card">
+                            <h2 class="settings-title">Configuración de Criptomonedas</h2>
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="enable-crypto" name="enable-crypto" class="checkbox-input" checked>
+                                    <label for="enable-crypto" class="checkbox-label">Habilitar pagos con criptomonedas</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="crypto-provider">Proveedor</label>
+                                <select id="crypto-provider" name="crypto-provider" class="form-select">
+                                    <option value="coinbase" selected>Coinbase Commerce</option>
+                                    <option value="btcpay">BTCPay Server</option>
+                                    <option value="manual">Manual (Wallet Addresses)</option>
+                                </select>
+                            </div>
+                            <div class="form-group crypto-coinbase-fields">
+                                <label for="coinbase-api-key">Coinbase API Key</label>
+                                <input type="password" id="coinbase-api-key" name="coinbase-api-key" class="form-input" value="************">
+                            </div>
+                            <div class="form-group crypto-coinbase-fields">
+                                <label for="coinbase-webhook-secret">Coinbase Webhook Secret</label>
+                                <input type="password" id="coinbase-webhook-secret" name="coinbase-webhook-secret" class="form-input" value="************">
+                            </div>
+                            <div class="form-group crypto-btcpay-fields" style="display: none;">
+                                <label for="btcpay-server-url">BTCPay Server URL</label>
+                                <input type="url" id="btcpay-server-url" name="btcpay-server-url" class="form-input" value="">
+                            </div>
+                            <div class="form-group crypto-manual-fields" style="display: none;">
+                                <label for="bitcoin-address">Dirección Bitcoin (BTC)</label>
+                                <input type="text" id="bitcoin-address" name="bitcoin-address" class="form-input" value="">
+                            </div>
+                            <div class="form-group crypto-manual-fields" style="display: none;">
+                                <label for="ethereum-address">Dirección Ethereum (ETH)</label>
+                                <input type="text" id="ethereum-address" name="ethereum-address" class="form-input" value="">
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="button" class="btn btn-outline test-connection-btn" data-provider="crypto">Probar Conexión</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Notificaciones de pagos -->
+                        <div class="settings-card">
+                            <h2 class="settings-title">Notificaciones de Pagos</h2>
+                            <div class="form-group">
+                                <label for="admin-email">Email para notificaciones de administrador</label>
+                                <input type="email" id="admin-email" name="admin-email" class="form-input" value="admin@infinityascend.com">
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="notify-new-sale" name="notify-new-sale" class="checkbox-input" checked>
+                                    <label for="notify-new-sale" class="checkbox-label">Notificar nueva venta</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="notify-failed-payment" name="notify-failed-payment" class="checkbox-input" checked>
+                                    <label for="notify-failed-payment" class="checkbox-label">Notificar pago fallido</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="notify-refund-request" name="notify-refund-request" class="checkbox-input" checked>
+                                    <label for="notify-refund-request" class="checkbox-label">Notificar solicitud de reembolso</label>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar eventos para la navegación móvil
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const adminApp = document.getElementById('admin-app');
+            
+            if (sidebarToggle && adminApp) {
+                sidebarToggle.addEventListener('click', function() {
+                    adminApp.classList.toggle('sidebar-collapsed');
+                });
+            }
+            
+            // Configurar cerrar sesión
+            const logoutButton = document.getElementById('logout-btn');
+            
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Eliminar el flag de autenticación
+                    localStorage.removeItem('admin_authenticated');
+                    
+                    // Redirigir a la página de login
+                    window.location.href = '/admin/login.html';
+                });
+            }
+            
+            // Manejar cambio de proveedor de criptomonedas
+            const cryptoProvider = document.getElementById('crypto-provider');
+            const coinbaseFields = document.querySelectorAll('.crypto-coinbase-fields');
+            const btcpayFields = document.querySelectorAll('.crypto-btcpay-fields');
+            const manualFields = document.querySelectorAll('.crypto-manual-fields');
+            
+            if (cryptoProvider) {
+                cryptoProvider.addEventListener('change', function() {
+                    // Ocultar todos los campos
+                    coinbaseFields.forEach(field => field.style.display = 'none');
+                    btcpayFields.forEach(field => field.style.display = 'none');
+                    manualFields.forEach(field => field.style.display = 'none');
+                    
+                    // Mostrar campos según el proveedor seleccionado
+                    if (this.value === 'coinbase') {
+                        coinbaseFields.forEach(field => field.style.display = 'block');
+                    } else if (this.value === 'btcpay') {
+                        btcpayFields.forEach(field => field.style.display = 'block');
+                    } else if (this.value === 'manual') {
+                        manualFields.forEach(field => field.style.display = 'block');
+                    }
+                });
+            }
+            
+            // Eventos para botones de prueba de conexión
+            const testConnectionButtons = document.querySelectorAll('.test-connection-btn');
+            
+            testConnectionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const provider = this.getAttribute('data-provider');
+                    
+                    // En un entorno real, aquí se enviaría una petición al servidor para probar la conexión
+                    // Por ahora, solo mostramos un mensaje
+                    setTimeout(() => {
+                        alert(`Conexión con ${provider} probada correctamente.`);
+                    }, 1000);
+                });
+            });
+            
+            // Manejar envío del formulario
+            const paymentSettingsForm = document.getElementById('payment-settings-form');
+            
+            if (paymentSettingsForm) {
+                paymentSettingsForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // En un entorno real, aquí enviaríamos los datos mediante AJAX
+                    alert('Configuración de pagos guardada correctamente.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

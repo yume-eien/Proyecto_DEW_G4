@@ -1,0 +1,223 @@
+/* =========================================
+   Estilos para páginas legales
+   ========================================= */
+
+/* Cabecera legal */
+.legal-header {
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+    padding: var(--space-xl) 0;
+    color: white;
+    text-align: center;
+}
+
+.legal-header .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+}
+
+.legal-header .page-description {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Layout de contenido legal */
+.legal-content {
+    padding: var(--space-2xl) 0;
+}
+
+.legal-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-xl);
+}
+
+/* Sidebar legal */
+.legal-sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-lg));
+    height: fit-content;
+}
+
+.toc-container {
+    background-color: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.toc-container h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-700);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--dark-200);
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-list li {
+    margin-bottom: var(--space-xs);
+}
+
+.toc-list a {
+    color: var(--dark-600);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    display: block;
+    padding: var(--space-xs) 0;
+}
+
+.toc-list a:hover {
+    color: var(--primary-500);
+}
+
+.legal-links {
+    background-color: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-lg);
+}
+
+.legal-links h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--dark-700);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+.legal-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legal-links li {
+    margin-bottom: var(--space-xs);
+}
+
+.legal-links a {
+    color: var(--primary-500);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    display: block;
+    padding: var(--space-xs) 0;
+}
+
+.legal-links a:hover {
+    color: var(--primary-600);
+    text-decoration: underline;
+}
+
+/* Documento legal */
+.legal-document {
+    background-color: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-xl);
+}
+
+.legal-document section {
+    margin-bottom: var(--space-xl);
+}
+
+.legal-document section:last-child {
+    margin-bottom: 0;
+}
+
+.legal-document h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-700);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--dark-200);
+}
+
+.legal-document h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-700);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.legal-document p {
+    margin-bottom: var(--space-md);
+    color: var(--dark-600);
+    line-height: 1.6;
+}
+
+.legal-document ul, 
+.legal-document ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-xl);
+    color: var(--dark-600);
+}
+
+.legal-document li {
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+}
+
+.legal-document a {
+    color: var(--primary-500);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.legal-document a:hover {
+    color: var(--primary-600);
+    text-decoration: underline;
+}
+
+.legal-document section {
+    scroll-margin-top: calc(var(--header-height) + var(--space-lg));
+}
+
+/* Estilos para la tabla de contenidos flotante */
+@media (min-width: 992px) {
+    .toc-container {
+        max-height: calc(100vh - var(--header-height) - var(--space-2xl));
+        overflow-y: auto;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .legal-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .legal-sidebar {
+        position: static;
+        margin-bottom: var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-header .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .legal-document {
+        padding: var(--space-lg);
+    }
+    
+    .legal-document h2 {
+        font-size: 1.25rem;
+    }
+    
+    .legal-document h3 {
+        font-size: 1.125rem;
+    }
+}

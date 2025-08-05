@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestión de Reembolsos - Infinity Ascend Software">
+    <title>Gestión de Reembolsos | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+</head>
+<body class="admin-body">
+    <div id="admin-app" class="admin-app">
+        <!-- Sidebar de navegación -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="admin-logo">
+                    <a href="/admin/index.html">
+                        <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                    </a>
+                </div>
+                <button class="sidebar-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/admin/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/sales/index.html" class="nav-link active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+                            <span>Ventas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/products/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/setters/index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <span>Community Setters</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/settings/general.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="logout-link" id="logout-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-left">
+                    <h1 class="page-title">Gestión de Reembolsos</h1>
+                </div>
+                <div class="header-right">
+                    <div class="period-filters">
+                        <button class="period-filter" data-period="day">Hoy</button>
+                        <button class="period-filter" data-period="week">Semana</button>
+                        <button class="period-filter active" data-period="month">Mes</button>
+                        <button class="period-filter" data-period="year">Año</button>
+                    </div>
+                    <div class="admin-profile">
+                        <img src="/assets/img/admin/avatar.jpg" alt="Admin" class="admin-avatar">
+                        <div class="admin-info">
+                            <span class="admin-name">Admin</span>
+                            <span class="admin-role">Administrador</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-dashboard">
+                <!-- Resumen de reembolsos -->
+                <section class="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M21.5 22v-6h-6"></path><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Total Reembolsos</h3>
+                            <div class="summary-value">32</div>
+                            <div class="summary-change negative">+8.3% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Valor Reembolsos</h3>
+                            <div class="summary-value">$1,459.68</div>
+                            <div class="summary-change negative">+12.5% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Pendientes</h3>
+                            <div class="summary-value">5</div>
+                            <div class="summary-change positive">-15% vs mes anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Ratio de Reembolsos</h3>
+                            <div class="summary-value">1.2%</div>
+                            <div class="summary-change negative">+0.3% vs mes anterior</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pestañas de reembolsos -->
+                <section class="refunds-tabs">
+                    <div class="tabs-container">
+                        <button class="tab-btn active" data-tab="all-refunds">Todos (32)</button>
+                        <button class="tab-btn" data-tab="pending-refunds">Pendientes (5)</button>
+                        <button class="tab-btn" data-tab="approved-refunds">Aprobados (24)</button>
+                        <button class="tab-btn" data-tab="rejected-refunds">Rechazados (3)</button>
+                    </div>
+                </section>
+
+                <!-- Filtros de búsqueda -->
+                <section class="refunds-filters">
+                    <div class="filters-grid">
+                        <div class="search-container">
+                            <input type="text" placeholder="Buscar por ID, cliente, email..." class="form-input">
+                        </div>
+                        <div class="filter-container">
+                            <select class="form-select">
+                                <option value="">Todos los productos</option>
+                                <option value="autoflow">Autoflow</option>
+                                <option value="bulletproof">BulletProof</option>
+                            </select>
+                        </div>
+                        <div class="filter-container">
+                            <select class="form-select">
+                                <option value="">Todas las razones</option>
+                                <option value="not-as-described">No como se describió</option>
+                                <option value="technical-issues">Problemas técnicos</option>
+                                <option value="changed-mind">Cambió de opinión</option>
+                                <option value="other">Otra razón</option>
+                            </select>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="btn btn-primary">Aplicar Filtros</button>
+                            <button class="btn btn-outline">Limpiar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabla de reembolsos -->
+                <section class="refunds-table-section">
+                    <div class="table-responsive">
+                        <table class="admin-table" id="refunds-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Reembolso</th>
+                                    <th>ID Pedido</th>
+                                    <th>Fecha Solicitud</th>
+                                    <th>Cliente</th>
+                                    <th>Producto</th>
+                                    <th>Monto</th>
+                                    <th>Razón</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RFD-2025051501</td>
+                                    <td>ORD-2025051001</td>
+                                    <td>15/05/2025 09:12</td>
+                                    <td>James Wilson</td>
+                                    <td>Autoflow</td>
+                                    <td>$49.99</td>
+                                    <td>Problemas técnicos</td>
+                                    <td><span class="status-badge warning">Pendiente</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-refund" data-id="RFD-2025051501">Ver</button>
+                                            <button class="btn btn-sm btn-primary approve-refund" data-id="RFD-2025051501">Aprobar</button>
+                                            <button class="btn btn-sm btn-outline reject-refund" data-id="RFD-2025051501">Rechazar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RFD-2025051402</td>
+                                    <td>ORD-2025050902</td>
+                                    <td>14/05/2025 16:45</td>
+                                    <td>Laura Martinez</td>
+                                    <td>BulletProof</td>
+                                    <td>$39.99</td>
+                                    <td>No como se describió</td>
+                                    <td><span class="status-badge warning">Pendiente</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-refund" data-id="RFD-2025051402">Ver</button>
+                                            <button class="btn btn-sm btn-primary approve-refund" data-id="RFD-2025051402">Aprobar</button>
+                                            <button class="btn btn-sm btn-outline reject-refund" data-id="RFD-2025051402">Rechazar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RFD-2025051203</td>
+                                    <td>ORD-2025050603</td>
+                                    <td>12/05/2025 11:30</td>
+                                    <td>David Johnson</td>
+                                    <td>Autoflow</td>
+                                    <td>$49.99</td>
+                                    <td>Cambió de opinión</td>
+                                    <td><span class="status-badge success">Aprobado</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-refund" data-id="RFD-2025051203">Ver</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RFD-2025051104</td>
+                                    <td>ORD-2025050504</td>
+                                    <td>11/05/2025 14:22</td>
+                                    <td>Sarah Miller</td>
+                                    <td>BulletProof</td>
+                                    <td>$39.99</td>
+                                    <td>Problemas técnicos</td>
+                                    <td><span class="status-badge success">Aprobado</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-refund" data-id="RFD-2025051104">Ver</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RFD-2025051005</td>
+                                    <td>ORD-2025050205</td>
+                                    <td>10/05/2025 09:15</td>
+                                    <td>Michael Robinson</td>
+                                    <td>Autoflow</td>
+                                    <td>$49.99</td>
+                                    <td>No como se describió</td>
+                                    <td><span class="status-badge error">Rechazado</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-sm btn-outline view-refund" data-id="RFD-2025051005">Ver</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-controls">
+                        <div class="pagination-info">
+                            Mostrando <span>1-5</span> de <span>32</span> resultados
+                        </div>
+                        <div class="pagination-buttons">
+                            <button class="btn btn-sm btn-outline" disabled>Anterior</button>
+                            <button class="btn btn-sm btn-outline active">1</button>
+                            <button class="btn btn-sm btn-outline">2</button>
+                            <button class="btn btn-sm btn-outline">3</button>
+                            <span>...</span>
+                            <button class="btn btn-sm btn-outline">7</button>
+                            <button class="btn btn-sm btn-outline">Siguiente</button>
+                        </div>
+                        <div class="pagination-options">
+                            <select class="form-select form-select-sm">
+                                <option value="10">10 por página</option>
+                                <option value="25">25 por página</option>
+                                <option value="50">50 por página</option>
+                                <option value="100">100 por página</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección de políticas de reembolso -->
+                <section class="refund-policy">
+                    <h2 class="section-title">Política de Reembolsos</h2>
+                    <div class="policy-container">
+                        <div class="policy-content">
+                            <p>La política actual permite reembolsos dentro de los primeros <strong>7 días</strong> después de la compra, siempre que el cliente demuestre que ha tenido problemas técnicos o que el producto no cumple con lo descrito.</p>
+                            <p>Los reembolsos por "cambio de opinión" se evalúan caso por caso y generalmente se aprueban si la solicitud se realiza dentro de los primeros 3 días.</p>
+                        </div>
+                        <div class="policy-actions">
+                            <a href="/admin/settings/general.html#refund-policy" class="btn btn-outline">Editar Política</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/admin/refund.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar eventos para la navegación móvil
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const adminApp = document.getElementById('admin-app');
+            
+            if (sidebarToggle && adminApp) {
+                sidebarToggle.addEventListener('click', function() {
+                    adminApp.classList.toggle('sidebar-collapsed');
+                });
+            }
+            
+            // Configurar cerrar sesión
+            const logoutButton = document.getElementById('logout-btn');
+            
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Eliminar el flag de autenticación
+                    localStorage.removeItem('admin_authenticated');
+                    
+                    // Redirigir a la página de login
+                    window.location.href = '/admin/login.html';
+                });
+            }
+            
+            // Pestañas de reembolsos
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover clase activa de todos los botones
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Agregar clase activa al botón seleccionado
+                    this.classList.add('active');
+                    
+                    // Aquí se cargarían los datos filtrados según la pestaña seleccionada
+                    const tabId = this.getAttribute('data-tab');
+                    console.log(`Tab seleccionada: ${tabId}`);
+                    
+                    // En una implementación real, aquí se actualizaría la tabla con los datos filtrados
+                });
+            });
+            
+            // Eventos para los botones de acciones
+            const viewButtons = document.querySelectorAll('.view-refund');
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const refundId = this.getAttribute('data-id');
+                    alert(`Ver reembolso: ${refundId}`);
+                });
+            });
+            
+            const approveButtons = document.querySelectorAll('.approve-refund');
+            approveButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const refundId = this.getAttribute('data-id');
+                    if (confirm(`¿Estás seguro de que deseas aprobar el reembolso ${refundId}?`)) {
+                        alert(`Reembolso aprobado: ${refundId}`);
+                        // En una implementación real, aquí se enviaría una petición al servidor
+                    }
+                });
+            });
+            
+            const rejectButtons = document.querySelectorAll('.reject-refund');
+            rejectButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const refundId = this.getAttribute('data-id');
+                    if (confirm(`¿Estás seguro de que deseas rechazar el reembolso ${refundId}?`)) {
+                        alert(`Reembolso rechazado: ${refundId}`);
+                        // En una implementación real, aquí se enviaría una petición al servidor
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de compras - Infinity Ascend Software">
+    <title>Carrito de Compras | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/checkout.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Selector de idioma flotante -->
+     <!--    <div class="language-selector">
+            <button class="language-btn active" data-lang="en">EN</button>
+            <button class="language-btn" data-lang="es">ES</button>
+            <button class="language-btn" data-lang="fr">FR</button>
+        </div> -->
+
+        <!-- Header con navegación -->
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="/index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                            <li><a href="/pages/catalog/index.html" class="nav-link" data-i18n="nav.products">Products</a></li>
+                           <li><a href="/pages/support/index.html" class="nav-link" data-i18n="nav.support">Support</a></li>
+                          <!--    <li><a href="/pages/user/dashboard.html" class="nav-link" data-i18n="nav.account">My Account</a></li> -->
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="cart-widget">
+                            <a href="/pages/cart.html" class="cart-icon active">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                        <button class="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Título de la página -->
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title" data-i18n="cart.title">Carrito de Compras</h1>
+                </div>
+            </section>
+
+            <!-- Contenido del carrito -->
+            <section class="cart-section">
+                <div class="container">
+                    <div class="cart-container">
+                        <!-- Estado vacío del carrito (se muestra/oculta con JS) -->
+                        <div class="cart-empty" style="display: none;">
+                            <div class="cart-empty-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            </div>
+                            <h2 data-i18n="cart.empty">Tu carrito está vacío</h2>
+                            <p data-i18n="cart.emptyMessage">Parece que aún no has añadido ningún producto a tu carrito.</p>
+                            <a href="/pages/catalog/index.html" class="btn btn-primary" data-i18n="cart.continueShopping">Continuar Comprando</a>
+                        </div>
+
+                        <!-- Contenido del carrito (se muestra/oculta con JS) -->
+                        <div class="cart-content">
+                            <!-- Tabla de productos -->
+                            <div class="cart-table-container">
+                                <table class="cart-table">
+                                    <thead>
+                                        <tr>
+                                            <th data-i18n="cart.product">Producto</th>
+                                            <th data-i18n="cart.price">Precio</th>
+                                            <th data-i18n="cart.quantity">Cantidad</th>
+                                            <th data-i18n="cart.total">Total</th>
+                                            <th><span class="visually-hidden" data-i18n="cart.actions">Acciones</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cart-items">
+                                        <!-- Los elementos del carrito se insertan aquí mediante JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Resumen y acciones -->
+                            <div class="cart-actions-container">
+                                <!-- Código de descuento -->
+                                <div class="cart-promo-code">
+                                    <h3 data-i18n="checkout.promoCode">¿Tienes un Código Promocional?</h3>
+                                    <div class="promo-code-form">
+                                        <input type="text" id="promo-code" placeholder="Código promocional" class="form-input">
+                                        <button id="apply-promo" class="btn btn-outline" data-i18n="checkout.applyCode">Aplicar Código</button>
+                                    </div>
+                                    <div id="promo-message" class="promo-message"></div>
+                                </div>
+
+                                <!-- Resumen del carrito -->
+                                <div class="cart-summary">
+                                    <h3 data-i18n="cart.orderSummary">Resumen del Pedido</h3>
+                                    <div class="summary-row">
+                                        <span data-i18n="cart.subtotal">Subtotal</span>
+                                        <span id="cart-subtotal">$0.00</span>
+                                    </div>
+                                    <div class="summary-row discount-row" style="display: none;">
+                                        <span data-i18n="cart.discount">Descuento</span>
+                                        <span id="cart-discount">-$0.00</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span data-i18n="cart.tax">Impuestos</span>
+                                        <span id="cart-tax">$0.00</span>
+                                    </div>
+                                    <div class="summary-row total-row">
+                                        <span data-i18n="cart.orderTotal">Total del Pedido</span>
+                                        <span id="cart-total">$0.00</span>
+                                    </div>
+                                    <div class="summary-actions">
+                                        <a href="/pages/checkout.html" class="btn btn-primary btn-block" data-i18n="cart.proceedToCheckout">Finalizar Compra</a>
+                                        <a href="/pages/catalog/index.html" class="btn btn-outline btn-block" data-i18n="cart.continueShopping">Continuar Comprando</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Productos recomendados -->
+            <section class="recommended-products-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="cart.recommendedProducts">Productos Recomendados</h2>
+                    
+                    <div class="products-grid">
+                        <!-- Los productos recomendados se insertan aquí mediante JS según el contenido del carrito -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="/assets/img/logos/infinity-ascend-logo-light.svg" alt="Infinity Ascend Software">
+                        </div>
+                        <p data-i18n="footer.description">Herramientas potentes y fáciles de usar para automatización y seguridad digital.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.products">Productos</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/products/autoflow/index.html" data-i18n="products.autoflow.title">Autoflow</a></li>
+                            <li><a href="/pages/products/bulletproof/index.html" data-i18n="products.bulletproof.title">BulletProof</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.support">Soporte</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/support/index.html" data-i18n="nav.support">Centro de Soporte</a></li>
+                    <!--         <li><a href="/pages/support/refund.html" data-i18n="footer.refunds">Reembolsos</a></li> -->
+                            <li><a href="/pages/legal/terms.html" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                            <li><a href="/pages/legal/privacy.html" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.contact">Contacto</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:support@infinityascend.com">support@infinityascend.com</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year">2025</span> Infinity Ascend Software. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <div class="payment-methods">
+                        <img src="/assets/img/logos/payment-paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="/assets/img/logos/payment-stripe.svg" alt="Stripe" loading="lazy">
+                        <img src="/assets/img/logos/payment-crypto.svg" alt="Cryptocurrency" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Plantilla para elementos del carrito (se clona con JS) -->
+    <template id="cart-item-template">
+        <tr class="cart-item">
+            <td class="product-info">
+                <div class="product-image">
+                    <img src="" alt="">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name"></h3>
+                    <p class="product-license" data-i18n="products.oneTimeLicense">Licencia de pago único</p>
+                </div>
+            </td>
+            <td class="product-price"></td>
+            <td class="product-quantity">
+                <div class="quantity-controls">
+                    <button class="quantity-btn decrement">-</button>
+                    <input type="number" class="quantity-input" min="1" value="1" readonly>
+                    <button class="quantity-btn increment">+</button>
+                </div>
+            </td>
+            <td class="product-total"></td>
+            <td class="product-actions">
+                <button class="remove-item" aria-label="Eliminar producto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
+            </td>
+        </tr>
+    </template>
+
+    <!-- Scripts -->
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Referencia al contenedor de elementos del carrito
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTemplate = document.getElementById('cart-item-template');
+            const emptyCartSection = document.querySelector('.cart-empty');
+            const cartContentSection = document.querySelector('.cart-content');
+            const subtotalElement = document.getElementById('cart-subtotal');
+            const discountRowElement = document.querySelector('.discount-row');
+            const discountElement = document.getElementById('cart-discount');
+            const taxElement = document.getElementById('cart-tax');
+            const totalElement = document.getElementById('cart-total');
+            const promoCodeInput = document.getElementById('promo-code');
+            const applyPromoButton = document.getElementById('apply-promo');
+            const promoMessageElement = document.getElementById('promo-message');
+            
+            // Tasa de impuesto (podría obtenerse dinámicamente según la ubicación)
+            const taxRate = 0; // 0% por defecto, ajustar según necesidad
+            
+            /**
+             * Renderiza los elementos del carrito en la página
+             */
+            function renderCartItems() {
+                // Limpiar contenedor
+                cartItemsContainer.innerHTML = '';
+                
+                // Obtener elementos del carrito
+                const cart = window.shoppingCart;
+                const items = cart.items;
+                
+                // Mostrar sección vacía o con contenido según corresponda
+                if (items.length === 0) {
+                    emptyCartSection.style.display = 'flex';
+                    cartContentSection.style.display = 'none';
+                    return;
+                } else {
+                    emptyCartSection.style.display = 'none';
+                    cartContentSection.style.display = 'block';
+                }
+                
+                // Renderizar cada elemento
+                items.forEach(item => {
+                    // Clonar la plantilla
+                    const itemElement = cartTemplate.content.cloneNode(true);
+                    
+                    // Actualizar información del producto
+                    const itemRow = itemElement.querySelector('.cart-item');
+                    itemRow.dataset.productId = item.id;
+                    
+                    const productImage = itemElement.querySelector('.product-image img');
+                    productImage.src = item.image;
+                    productImage.alt = item.name;
+                    
+                    const productName = itemElement.querySelector('.product-name');
+                    productName.textContent = item.name;
+                    
+                    const productPrice = itemElement.querySelector('.product-price');
+                    productPrice.textContent = window.infinityUtils.formatPrice(item.price);
+                    
+                    const quantityInput = itemElement.querySelector('.quantity-input');
+                    quantityInput.value = item.quantity;
+                    
+                    const productTotal = itemElement.querySelector('.product-total');
+                    productTotal.textContent = window.infinityUtils.formatPrice(item.price * item.quantity);
+                    
+                    // Configurar eventos de los botones de cantidad
+                    const decrementBtn = itemElement.querySelector('.decrement');
+                    const incrementBtn = itemElement.querySelector('.increment');
+                    
+                    decrementBtn.addEventListener('click', () => {
+                        if (item.quantity > 1) {
+                            cart.updateItemQuantity(item.id, item.quantity - 1);
+                            updateCartDisplay();
+                        }
+                    });
+                    
+                    incrementBtn.addEventListener('click', () => {
+                        cart.updateItemQuantity(item.id, item.quantity + 1);
+                        updateCartDisplay();
+                    });
+                    
+                    // Configurar evento del botón de eliminar
+                    const removeBtn = itemElement.querySelector('.remove-item');
+                    removeBtn.addEventListener('click', () => {
+                        cart.removeItem(item.id);
+                        updateCartDisplay();
+                    });
+                    
+                    // Añadir al contenedor
+                    cartItemsContainer.appendChild(itemElement);
+                });
+                
+                // Actualizar resumen del carrito
+                updateCartSummary();
+            }
+            
+            /**
+             * Actualiza el resumen del carrito (subtotal, descuento, impuestos, total)
+             */
+            function updateCartSummary() {
+                const cart = window.shoppingCart;
+                
+                // Formatear valores monetarios
+                const subtotal = cart.getSubtotal();
+                const discount = cart.discountAmount;
+                const tax = cart.getTax(taxRate);
+                const total = cart.getTotal(taxRate);
+                
+                // Actualizar elementos
+                subtotalElement.textContent = window.infinityUtils.formatPrice(subtotal);
+                
+                // Mostrar u ocultar fila de descuento según corresponda
+                if (discount > 0) {
+                    discountRowElement.style.display = 'flex';
+                    discountElement.textContent = '-' + window.infinityUtils.formatPrice(discount);
+                } else {
+                    discountRowElement.style.display = 'none';
+                }
+                
+                taxElement.textContent = window.infinityUtils.formatPrice(tax);
+                totalElement.textContent = window.infinityUtils.formatPrice(total);
+                
+                // Mostrar código de descuento aplicado si existe
+                if (cart.discountCode) {
+                    promoMessageElement.textContent = window.i18n && window.i18n.initialized ? 
+                        window.i18n.translate('cart.promoApplied', {code: cart.discountCode}) : 
+                        `Código ${cart.discountCode} aplicado`;
+                    promoMessageElement.className = 'promo-message success';
+                } else {
+                    promoMessageElement.textContent = '';
+                    promoMessageElement.className = 'promo-message';
+                }
+            }
+            
+            /**
+             * Función principal para actualizar la visualización del carrito
+             */
+            function updateCartDisplay() {
+                renderCartItems();
+                // Posiblemente cargar productos recomendados basados en el carrito
+                loadRecommendedProducts();
+            }
+            
+            /**
+             * Carga productos recomendados basados en el contenido del carrito
+             */
+            function loadRecommendedProducts() {
+                const recommendedContainer = document.querySelector('.products-grid');
+                const cart = window.shoppingCart;
+                
+                if (!recommendedContainer) return;
+                
+                // Limpiar contenedor
+                recommendedContainer.innerHTML = '';
+                
+                // Lógica simple: si no tiene Autoflow, recomendar Autoflow; si no tiene BulletProof, recomendar BulletProof
+                const hasAutoflow = cart.items.some(item => item.id === 'autoflow');
+                const hasBulletproof = cart.items.some(item => item.id === 'bulletproof');
+                
+                // Mostrar u ocultar sección de recomendados
+                const recommendedSection = document.querySelector('.recommended-products-section');
+                
+                if (cart.items.length === 0 || (hasAutoflow && hasBulletproof)) {
+                    // Si el carrito está vacío o ya tiene ambos productos, ocultar sección
+                    if (recommendedSection) {
+                        recommendedSection.style.display = 'none';
+                    }
+                    return;
+                } else {
+                    if (recommendedSection) {
+                        recommendedSection.style.display = 'block';
+                    }
+                }
+                
+                // Crear tarjetas de productos recomendados
+                if (!hasAutoflow) {
+                    const autoflowCard = createProductCard({
+                        id: 'autoflow',
+                        name: window.i18n && window.i18n.initialized ? window.i18n.translate('products.autoflow.title') : 'Autoflow',
+                        price: 49.99,
+                        image: '/assets/img/products/autoflow/main-thumb.jpg',
+                        description: window.i18n && window.i18n.initialized ? 
+                            window.i18n.translate('products.autoflow.description') : 
+                            'Software de automatización masiva que te permite definir acciones, velocidad y frecuencia de manera intuitiva.',
+                        url: '/pages/products/autoflow/index.html'
+                    });
+                    
+                    recommendedContainer.appendChild(autoflowCard);
+                }
+                
+                if (!hasBulletproof) {
+                    const bulletproofCard = createProductCard({
+                        id: 'bulletproof',
+                        name: window.i18n && window.i18n.initialized ? window.i18n.translate('products.bulletproof.title') : 'BulletProof',
+                        price: 39.99,
+                        image: '/assets/img/products/bulletproof/main-thumb.jpg',
+                        description: window.i18n && window.i18n.initialized ? 
+                            window.i18n.translate('products.bulletproof.description') : 
+                            'Gestor y generador de contraseñas con mínimo 300 bits de seguridad, imposibles de hackear.',
+                        url: '/pages/products/bulletproof/index.html'
+                    });
+                    
+                    recommendedContainer.appendChild(bulletproofCard);
+                }
+            }
+            
+            /**
+             * Crea una tarjeta de producto para la sección de recomendados
+             * @param {Object} product - Información del producto
+             * @returns {HTMLElement} - Elemento de tarjeta de producto
+             */
+            function createProductCard(product) {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                
+                card.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3>${product.name}</h3>
+                        <p class="product-price">${window.infinityUtils.formatPrice(product.price)}</p>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-actions">
+                            <a href="${product.url}" class="btn btn-outline" data-i18n="buttons.learnMore">Saber más</a>
+                            <button class="btn btn-primary add-to-cart" data-product="${product.id}" data-i18n="buttons.addToCart">Añadir al carrito</button>
+                        </div>
+                    </div>
+                `;
+                
+                // Configurar evento del botón "Añadir al carrito"
+                const addButton = card.querySelector('.add-to-cart');
+                addButton.addEventListener('click', () => {
+                    window.shoppingCart.addItem(product);
+                    updateCartDisplay();
+                });
+                
+                return card;
+            }
+            
+            // Configurar evento para aplicar código de descuento
+            if (applyPromoButton && promoCodeInput) {
+                applyPromoButton.addEventListener('click', () => {
+                    const code = promoCodeInput.value.trim();
+                    
+                    if (!code) {
+                        promoMessageElement.textContent = window.i18n && window.i18n.initialized ? 
+                            window.i18n.translate('cart.enterPromo') : 
+                            'Por favor, introduce un código promocional';
+                        promoMessageElement.className = 'promo-message error';
+                        return;
+                    }
+                    
+                    const success = window.shoppingCart.applyDiscountCode(code);
+                    
+                    if (success) {
+                        promoMessageElement.textContent = window.i18n && window.i18n.initialized ? 
+                            window.i18n.translate('cart.promoApplied', {code: code}) : 
+                            `Código ${code} aplicado correctamente`;
+                        promoMessageElement.className = 'promo-message success';
+                    } else {
+                        promoMessageElement.textContent = window.i18n && window.i18n.initialized ? 
+                            window.i18n.translate('cart.invalidPromo') : 
+                            'Código promocional inválido o expirado';
+                        promoMessageElement.className = 'promo-message error';
+                    }
+                    
+                    // Actualizar resumen del carrito
+                    updateCartSummary();
+                });
+            }
+            
+            // Actualizar carrito cuando cambie
+            document.addEventListener('cartUpdated', function() {
+                updateCartDisplay();
+            });
+            
+            // Inicializar la visualización del carrito
+            updateCartDisplay();
+        });
+    </script>
+</body>
+</html>

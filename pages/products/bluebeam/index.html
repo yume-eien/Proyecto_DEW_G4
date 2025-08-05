@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BulletProof - Gestor y generador de contraseñas seguras con mínimo 300 bits de seguridad.">
+    <title>BulletProof | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/products.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="app" class="app">
+
+        <!-- Header con navegación -->
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="/index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                            <li><a href="/pages/catalog/index.html" class="nav-link active" data-i18n="nav.products">Products</a></li>
+                            <li><a href="/pages/support/index.html" class="nav-link" data-i18n="nav.support">Support</a></li>
+                           <!--  <li><a href="/pages/user/dashboard.html" class="nav-link" data-i18n="nav.account">My Account</a></li> -->
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="cart-widget">
+                            <a href="/pages/cart.html" class="cart-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                        <button class="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero del producto -->
+            <section class="product-hero">
+                <div class="container">
+                    <div class="product-hero-content">
+                        <div class="product-info">
+                            <h1 class="product-title" data-i18n="products.bulletproof.title">BulletProof</h1>
+                            <p class="product-tagline" data-i18n="products.bulletproof.tagline">Máxima seguridad para tus contraseñas</p>
+                            <div class="product-price-container">
+                                <span class="product-price">$39.99</span>
+                                <span class="product-license" data-i18n="products.oneTimeLicense">Licencia de pago único</span>
+                            </div>
+                            <p class="product-description" data-i18n="products.bulletproof.heroDesc">Gestor y generador de contraseñas con mínimo 300 bits de seguridad, imposibles de hackear incluso para los ordenadores más potentes del mundo.</p>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-lg add-to-cart" data-product="bulletproof" data-i18n="buttons.addToCart">Añadir al carrito</button>
+                                <a href="#video-demo" class="btn btn-secondary btn-lg" data-i18n="buttons.watchDemo">Ver demostración</a>
+                            </div>
+                            <div class="product-badges">
+                                <div class="badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    <span data-i18n="products.instantDelivery">Entrega instantánea</span>
+                                </div>
+                                <div class="badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                    <span data-i18n="products.securePayment">Pago seguro</span>
+                                </div>
+                                <div class="badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                                    <span data-i18n="products.satisfaction">Satisfacción garantizada</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-image-container">
+                            <img src="/assets/img/products/bulletproof/main-image.jpg" alt="BulletProof Software Interface" class="product-main-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video de demostración -->
+            <section id="video-demo" class="video-demo-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="products.videoDemo">Demostración en Video</h2>
+                    <p class="section-subtitle" data-i18n="products.autoflow.videoDesc">Observa Autoflow en acción y descubre cómo puede transformar tu flujo de trabajo diario.</p>
+                    <div class="video-container">
+                        <iframe 
+                            width="900"
+                            height="515"
+                            src="https://www.youtube.com/embed/SXJJ1YzPkEk?autoplay=1&mute=1&loop=1&playlist=SXJJ1YzPkEk&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1" 
+                            title="Autoflow Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Características principales -->
+            <section class="features-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="products.keyFeatures">Características Principales</h2>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            </div>
+                            <h3 data-i18n="products.bulletproof.features.security.title">300+ bits de seguridad</h3>
+                            <p data-i18n="products.bulletproof.features.security.desc">Genera contraseñas con más de 300 bits de entropía, exponencialmente más seguras que el estándar de la industria.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                            </div>
+                            <h3 data-i18n="products.bulletproof.features.storage.title">Almacenamiento cifrado</h3>
+                            <p data-i18n="products.bulletproof.features.storage.desc">Tus contraseñas se guardan con cifrado de grado militar y llave maestra, inaccesible incluso para nosotros.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            </div>
+                            <h3 data-i18n="products.bulletproof.features.organization.title">Organización jerárquica</h3>
+                            <p data-i18n="products.bulletproof.features.organization.desc">Organiza tus contraseñas en carpetas, etiquetas y categorías para un acceso rápido y eficiente.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                            <h3 data-i18n="products.bulletproof.features.multiPlatform.title">Multiplataforma</h3>
+                            <p data-i18n="products.bulletproof.features.multiPlatform.desc">Disponible para Windows, macOS, Linux y con extensiones para los principales navegadores.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h3 data-i18n="products.bulletproof.features.vulnerabilities.title">Alerta de vulnerabilidades</h3>
+                            <p data-i18n="products.bulletproof.features.vulnerabilities.desc">Recibe notificaciones instantáneas si alguna de tus contraseñas se ve comprometida en filtraciones de datos.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <h3 data-i18n="products.bulletproof.features.autofill.title">Autocompletado seguro</h3>
+                            <p data-i18n="products.bulletproof.features.autofill.desc">Rellena automáticamente tus credenciales en sitios web y aplicaciones con autenticación de doble factor.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonios específicos del producto -->
+            <section class="testimonials-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="sections.testimonials.title">Lo que dicen nuestros clientes</h2>
+                    
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Como administrador de sistemas, BulletProof se ha convertido en una herramienta indispensable. La seguridad de 300+ bits es impresionante, y la organización jerárquica me permite mantener separadas las contraseñas personales de las empresariales."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Sophie Laurent</p>
+                                <p class="author-role">IT Manager</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"He probado muchos gestores de contraseñas, pero BulletProof está en otro nivel. La facilidad de uso combinada con la seguridad militar lo hace perfecto tanto para principiantes como para expertos en seguridad."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Mark Johnson</p>
+                                <p class="author-role">Consultor de Ciberseguridad</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"La característica de alerta de vulnerabilidades me ha salvado varias veces. Recibí una notificación inmediata cuando una de mis cuentas fue comprometida en una filtración de datos, y pude cambiar la contraseña antes de que ocurriera cualquier daño."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Elena Rodríguez</p>
+                                <p class="author-role">Emprendedora Digital</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Requisitos del sistema -->
+            <section class="system-requirements-section">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="products.systemRequirements">Requisitos del Sistema</h2>
+                    
+                    <div class="requirements-container">
+                        <div class="requirement-group">
+                            <h3>Windows</h3>
+                            <ul class="requirements-list">
+                                <li>Windows 10/11 (64-bit)</li>
+                                <li>4GB de RAM (6GB recomendado)</li>
+                                <li>300MB de espacio en disco</li>
+                                <li>Procesador Intel i3/AMD Ryzen 3 o superior</li>
+                                <li>Conexión a Internet para la activación y actualizaciones de seguridad</li>
+                            </ul>
+                        </div>
+                        <div class="requirement-group">
+                            <h3>macOS</h3>
+                            <ul class="requirements-list">
+                                <li>macOS 11.0 Big Sur o superior</li>
+                                <li>4GB de RAM (6GB recomendado)</li>
+                                <li>400MB de espacio en disco</li>
+                                <li>Procesador Intel o Apple Silicon</li>
+                                <li>Conexión a Internet para la activación y actualizaciones de seguridad</li>
+                            </ul>
+                        </div>
+                        <div class="requirement-group">
+                            <h3>Linux</h3>
+                            <ul class="requirements-list">
+                                <li>Ubuntu 20.04 LTS o equivalente</li>
+                                <li>4GB de RAM (6GB recomendado)</li>
+                                <li>350MB de espacio en disco</li>
+                                <li>Procesador Intel i3/AMD Ryzen 3 o superior</li>
+                                <li>Conexión a Internet para la activación y actualizaciones de seguridad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQs -->
+            <section class="faq-section" id="faq">
+                <div class="container">
+                    <h2 class="section-title" data-i18n="products.faqTitle">Preguntas Frecuentes</h2>
+                    
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-i18n="products.bulletproof.faq.q1">¿Qué hace que BulletProof sea más seguro que otros gestores de contraseñas?</span>
+                                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-i18n="products.bulletproof.faq.a1">BulletProof se diferencia por utilizar algoritmos de encriptación de grado militar con más de 300 bits de entropía, mientras que la mayoría de los gestores de contraseñas se limitan a 128 o 256 bits. Esto hace que las contraseñas generadas por BulletProof sean prácticamente invulnerables a ataques de fuerza bruta, incluso con la tecnología de supercomputación más avanzada. Además, implementamos un sistema de cifrado de extremo a extremo donde ni siquiera nosotros podemos acceder a tus contraseñas, y añadimos capas adicionales de seguridad como autenticación de dos factores, detección de keyloggers y protección contra ataques de relleno.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-i18n="products.bulletproof.faq.q2">¿Qué sucede si olvido mi contraseña maestra?</span>
+                                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-i18n="products.bulletproof.faq.a2">Por razones de seguridad, no almacenamos tu contraseña maestra y no podemos recuperarla si la olvidas. Sin embargo, BulletProof ofrece dos opciones de respaldo:</p>
+                                <ol>
+                                    <li>Durante la configuración inicial, puedes generar una clave de recuperación de emergencia que debes guardar en un lugar seguro.</li>
+                                    <li>Puedes configurar un método de recuperación basado en preguntas de seguridad personalizadas y un dispositivo de confianza.</li>
+                                </ol>
+                                <p>Si no has configurado ninguna de estas opciones y olvidas tu contraseña maestra, no podrás acceder a tus contraseñas almacenadas. Esta limitación es un aspecto fundamental de nuestro enfoque de seguridad, ya que garantiza que nadie, ni siquiera nosotros, pueda acceder a tus contraseñas sin autorización.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-i18n="products.bulletproof.faq.q3">¿Cómo funciona la sincronización entre dispositivos?</span>
+                                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-i18n="products.bulletproof.faq.a3">BulletProof sincroniza tus contraseñas entre dispositivos de manera segura utilizando cifrado de extremo a extremo. Cuando añades o modificas una contraseña en un dispositivo, los datos se cifran localmente antes de enviarse a nuestros servidores. Estos datos cifrados solo pueden ser descifrados por tus dispositivos autorizados que poseen la clave de descifrado derivada de tu contraseña maestra.</p>
+                                <p>Puedes elegir entre tres modos de sincronización:</p>
+                                <ul>
+                                    <li><strong>Automático:</strong> Sincronización instantánea cuando se detectan cambios.</li>
+                                    <li><strong>Manual:</strong> Sincronización solo cuando tú lo solicitas.</li>
+                                    <li><strong>Local:</strong> Sin sincronización en la nube, ideal para entornos de alta seguridad.</li>
+                                </ul>
+                                <p>La sincronización funciona en todos los sistemas operativos compatibles (Windows, macOS, Linux) y con las extensiones de navegador.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-i18n="products.bulletproof.faq.q4">¿Es posible importar contraseñas desde otros gestores?</span>
+                                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-i18n="products.bulletproof.faq.a4">Sí, BulletProof permite importar contraseñas desde la mayoría de los gestores de contraseñas populares, incluyendo LastPass, 1Password, Dashlane, KeePass, Bitwarden y Chrome/Firefox/Safari. El proceso de importación es seguro y preserva todas tus carpetas, etiquetas y metadatos.</p>
+                                <p>Para importar tus contraseñas:</p>
+                                <ol>
+                                    <li>Exporta tus datos desde tu gestor de contraseñas actual (generalmente en formato CSV o XML).</li>
+                                    <li>En BulletProof, ve a Configuración > Importar.</li>
+                                    <li>Selecciona tu gestor de contraseñas anterior y carga el archivo exportado.</li>
+                                    <li>Revisa y confirma la importación.</li>
+                                </ol>
+                                <p>Después de la importación, te recomendamos analizar la seguridad de tus contraseñas existentes. BulletProof identificará automáticamente contraseñas débiles, duplicadas o comprometidas, y te ofrecerá reemplazarlas con alternativas más seguras.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA final -->
+            <section class="cta-section">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 data-i18n="products.bulletproof.ctaTitle">Protege tus credenciales con el más alto nivel de seguridad</h2>
+                        <p data-i18n="products.bulletproof.ctaDesc">Únete a miles de usuarios que confían en BulletProof para mantener seguros sus datos más sensibles.</p>
+                        <div class="cta-actions">
+                            <button class="btn btn-primary btn-lg add-to-cart" data-product="bulletproof" data-i18n="buttons.addToCart">Añadir al carrito</button>
+                            <a href="/pages/support/index.html" class="btn btn-outline btn-lg" data-i18n="products.haveQuestions">¿Tienes preguntas?</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="/assets/img/logos/infinity-ascend-logo-light.svg" alt="Infinity Ascend Software">
+                        </div>
+                        <p data-i18n="footer.description">Herramientas potentes y fáciles de usar para automatización y seguridad digital.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.products">Productos</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/products/autoflow/index.html" data-i18n="products.autoflow.title">Autoflow</a></li>
+                            <li><a href="/pages/products/bulletproof/index.html" data-i18n="products.bulletproof.title">BulletProof</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.support">Soporte</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/support/index.html" data-i18n="nav.support">Centro de Soporte</a></li>
+                   <!--          <li><a href="/pages/support/refund.html" data-i18n="footer.refunds">Reembolsos</a></li> -->
+                            <li><a href="/pages/legal/terms.html" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                            <li><a href="/pages/legal/privacy.html" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.contact">Contacto</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:support@infinityascend.com">support@infinityascend.com</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year">2025</span> Infinity Ascend Software. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <div class="payment-methods">
+                        <img src="/assets/img/logos/payment-paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="/assets/img/logos/payment-stripe.svg" alt="Stripe" loading="lazy">
+                        <img src="/assets/img/logos/payment-crypto.svg" alt="Cryptocurrency" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/cart.js"></script>
+    <script src="/assets/js/products.js"></script>
+</body>
+</html>

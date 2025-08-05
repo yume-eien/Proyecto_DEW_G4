@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Historial de Compras - Infinity Ascend Software">
+    <title>Mis Compras | Infinity Ascend Software</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/user.css">
+    <link rel="icon" href="/assets/img/logos/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Selector de idioma flotante -->
+      <!--   <div class="language-selector">
+            <button class="language-btn active" data-lang="en">EN</button>
+            <button class="language-btn" data-lang="es">ES</button>
+            <button class="language-btn" data-lang="fr">FR</button>
+        </div> -->
+
+        <!-- Header con navegación -->
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="/assets/img/logos/infinity-ascend-logo.svg" alt="Infinity Ascend Software" class="logo-img">
+                        </a>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="/index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                            <li><a href="/pages/catalog/index.html" class="nav-link" data-i18n="nav.products">Products</a></li>
+                          <li><a href="/pages/support/index.html" class="nav-link" data-i18n="nav.support">Support</a></li>
+                           <!--    <li><a href="/pages/user/dashboard.html" class="nav-link active" data-i18n="nav.account">My Account</a></li> -->
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="cart-widget">
+                            <a href="/pages/cart.html" class="cart-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                        <button class="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Cabecera de usuario -->
+        <div class="user-header">
+            <div class="container">
+                <h1 class="page-title">Historial de Compras</h1>
+                <p class="page-description">Revisa todas tus compras y gestiona tus licencias de software.</p>
+            </div>
+        </div>
+
+        <!-- Panel de usuario -->
+        <div class="user-panel">
+            <div class="container">
+                <div class="user-panel-container">
+                    <!-- Sidebar de usuario -->
+                    <aside class="user-sidebar">
+                        <div class="user-profile">
+                            <div class="user-avatar">JD</div>
+                            <div class="user-info">
+                                <h2 class="user-name">John Doe</h2>
+                                <p class="user-email">john.doe@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <nav class="user-nav">
+                            <ul class="user-nav-list">
+                                <li class="user-nav-item">
+                                    <a href="/pages/user/dashboard.html" class="user-nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="user-nav-item">
+                                    <a href="/pages/user/purchases.html" class="user-nav-link active">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                        <span>Mis Compras</span>
+                                    </a>
+                                </li>
+                                <li class="user-nav-item">
+                                    <a href="/pages/user/refunds.html" class="user-nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"></path><path d="M12 17.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path></svg>
+                                        <span>Reembolsos</span>
+                                    </a>
+                                </li>
+                                <li class="user-nav-item">
+                                    <a href="#" class="user-nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                                        <span>Configuración</span>
+                                    </a>
+                                </li>
+                                <li class="user-nav-item">
+                                    <a href="#" class="user-nav-link logout-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span>Cerrar Sesión</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Contenido principal -->
+                    <div class="user-content">
+                        <!-- Historial de Compras -->
+                        <div class="dashboard-section">
+                            <div class="section-header">
+                                <h2 class="section-title">Todas Mis Compras</h2>
+                                <div class="section-actions">
+                                    <select id="purchases-filter" class="form-select">
+                                        <option value="all">Todas</option>
+                                        <option value="30days">Últimos 30 días</option>
+                                        <option value="6months">Últimos 6 meses</option>
+                                        <option value="year">Último año</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="purchases-table-container">
+                                <table class="purchases-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID de Compra</th>
+                                            <th>Fecha</th>
+                                            <th>Productos</th>
+                                            <th>Total</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="purchase-id">ORD-2024051701</td>
+                                            <td>17/05/2024</td>
+                                            <td>
+                                                <div class="purchase-products">
+                                                    <span class="product-badge">Autoflow</span>
+                                                </div>
+                                            </td>
+                                            <td>$49.99</td>
+                                            <td><span class="status-badge success">Completado</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-sm btn-outline view-purchase" data-id="ORD-2024051701">Ver detalles</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="purchase-id">ORD-2024050301</td>
+                                            <td>03/05/2024</td>
+                                            <td>
+                                                <div class="purchase-products">
+                                                    <span class="product-badge">BulletProof</span>
+                                                </div>
+                                            </td>
+                                            <td>$39.99</td>
+                                            <td><span class="status-badge success">Completado</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-sm btn-outline view-purchase" data-id="ORD-2024050301">Ver detalles</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="purchase-id">ORD-2024042001</td>
+                                            <td>20/04/2024</td>
+                                            <td>
+                                                <div class="purchase-products">
+                                                    <span class="product-badge">Autoflow</span>
+                                                    <span class="product-badge">BulletProof</span>
+                                                </div>
+                                            </td>
+                                            <td>$79.99</td>
+                                            <td><span class="status-badge success">Completado</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-sm btn-outline view-purchase" data-id="ORD-2024042001">Ver detalles</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal de detalles de compra -->
+                        <div id="purchase-details-modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Detalles de Compra</h3>
+                                    <button class="modal-close">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="purchase-details">
+                                        <div class="purchase-details-header">
+                                            <div class="purchase-info">
+                                                <p><strong>ID de Pedido:</strong> <span id="modal-order-id">ORD-2024051701</span></p>
+                                                <p><strong>Fecha:</strong> <span id="modal-order-date">17/05/2024</span></p>
+                                            </div>
+                                            <div class="purchase-status">
+                                                <span class="status-badge success" id="modal-order-status">Completado</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="purchase-products-section">
+                                            <h4>Productos</h4>
+                                            <div class="purchase-product-list" id="modal-products">
+                                                <div class="purchase-product-item">
+                                                    <div class="product-image">
+                                                        <img src="/assets/img/products/autoflow/main-thumb.jpg" alt="Autoflow">
+                                                    </div>
+                                                    <div class="product-details">
+                                                        <h5>Autoflow</h5>
+                                                        <p class="product-license">Licencia de pago único</p>
+                                                        <p class="product-price">$49.99</p>
+                                                    </div>
+                                                    <div class="product-actions">
+                                                        <button class="btn btn-sm btn-primary">Descargar</button>
+                                                        <button class="btn btn-sm btn-outline">Ver Licencia</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="purchase-summary">
+                                            <h4>Resumen</h4>
+                                            <div class="summary-item">
+                                                <span>Subtotal:</span>
+                                                <span id="modal-subtotal">$49.99</span>
+                                            </div>
+                                            <div class="summary-item">
+                                                <span>Descuento:</span>
+                                                <span id="modal-discount">$0.00</span>
+                                            </div>
+                                            <div class="summary-item total">
+                                                <span>Total:</span>
+                                                <span id="modal-total">$49.99</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="purchase-payment">
+                                            <h4>Información de Pago</h4>
+                                            <p><strong>Método:</strong> <span id="modal-payment-method">Tarjeta de Crédito (Visa terminada en 1234)</span></p>
+                                            <p><strong>Estado:</strong> <span class="payment-status success" id="modal-payment-status">Pagado</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-outline" id="download-invoice">Descargar Factura</button>
+                                    <button class="btn btn-primary" id="close-modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="/assets/img/logos/infinity-ascend-logo-light.svg" alt="Infinity Ascend Software">
+                        </div>
+                        <p data-i18n="footer.description">Herramientas potentes y fáciles de usar para automatización y seguridad digital.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.products">Productos</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/products/autoflow/index.html" data-i18n="products.autoflow.title">Autoflow</a></li>
+                            <li><a href="/pages/products/bulletproof/index.html" data-i18n="products.bulletproof.title">BulletProof</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.support">Soporte</h4>
+                        <ul class="footer-links">
+                            <li><a href="/pages/support/index.html" data-i18n="nav.support">Centro de Soporte</a></li>
+                    <!--         <li><a href="/pages/support/refund.html" data-i18n="footer.refunds">Reembolsos</a></li> -->
+                            <li><a href="/pages/legal/terms.html" data-i18n="footer.terms">Términos y Condiciones</a></li>
+                            <li><a href="/pages/legal/privacy.html" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.contact">Contacto</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:support@infinityascend.com">support@infinityascend.com</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year">2025</span> Infinity Ascend Software. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                    <div class="payment-methods">
+                        <img src="/assets/img/logos/payment-paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="/assets/img/logos/payment-stripe.svg" alt="Stripe" loading="lazy">
+                        <img src="/assets/img/logos/payment-crypto.svg" alt="Cryptocurrency" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Referencias al modal
+            const modal = document.getElementById('purchase-details-modal');
+            const viewButtons = document.querySelectorAll('.view-purchase');
+            const closeButton = document.querySelector('.modal-close');
+            const closeModalButton = document.getElementById('close-modal');
+            
+            // Abrir modal al hacer clic en "Ver detalles"
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const orderId = this.getAttribute('data-id');
+                    loadOrderDetails(orderId);
+                    modal.style.display = 'flex';
+                });
+            });
+            
+            // Cerrar modal
+            closeButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            closeModalButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // Cerrar modal al hacer clic fuera del contenido
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Filtro de compras
+            const purchasesFilter = document.getElementById('purchases-filter');
+            purchasesFilter.addEventListener('change', function() {
+                // Aquí iría la lógica de filtrado
+                console.log('Filtrar por:', this.value);
+            });
+            
+            // Función para cargar detalles del pedido (simulada)
+            function loadOrderDetails(orderId) {
+                // En un entorno real, esto sería una llamada a la API
+                let orderDetails;
+                
+                // Simulamos diferentes órdenes
+                switch(orderId) {
+                    case 'ORD-2024051701':
+                        orderDetails = {
+                            id: 'ORD-2024051701',
+                            date: '17/05/2024',
+                            status: 'Completado',
+                            products: [
+                                {
+                                    name: 'Autoflow',
+                                    price: 49.99,
+                                    image: '/assets/img/products/autoflow/main-thumb.jpg'
+                                }
+                            ],
+                            subtotal: 49.99,
+                            discount: 0,
+                            total: 49.99,
+                            paymentMethod: 'Tarjeta de Crédito (Visa terminada en 1234)',
+                            paymentStatus: 'Pagado'
+                        };
+                        break;
+                    case 'ORD-2024050301':
+                        orderDetails = {
+                            id: 'ORD-2024050301',
+                            date: '03/05/2024',
+                            status: 'Completado',
+                            products: [
+                                {
+                                    name: 'BulletProof',
+                                    price: 39.99,
+                                    image: '/assets/img/products/bulletproof/main-thumb.jpg'
+                                }
+                            ],
+                            subtotal: 39.99,
+                            discount: 0,
+                            total: 39.99,
+                            paymentMethod: 'PayPal',
+                            paymentStatus: 'Pagado'
+                        };
+                        break;
+                    case 'ORD-2024042001':
+                        orderDetails = {
+                            id: 'ORD-2024042001',
+                            date: '20/04/2024',
+                            status: 'Completado',
+                            products: [
+                                {
+                                    name: 'Autoflow',
+                                    price: 49.99,
+                                    image: '/assets/img/products/autoflow/main-thumb.jpg'
+                                },
+                                {
+                                    name: 'BulletProof',
+                                    price: 39.99,
+                                    image: '/assets/img/products/bulletproof/main-thumb.jpg'
+                                }
+                            ],
+                            subtotal: 89.98,
+                            discount: 9.99,
+                            total: 79.99,
+                            paymentMethod: 'Criptomoneda (Bitcoin)',
+                            paymentStatus: 'Pagado'
+                        };
+                        break;
+                    default:
+                        orderDetails = {
+                            id: orderId,
+                            date: '01/01/2024',
+                            status: 'Desconocido',
+                            products: [],
+                            subtotal: 0,
+                            discount: 0,
+                            total: 0,
+                            paymentMethod: 'Desconocido',
+                            paymentStatus: 'Desconocido'
+                        };
+                }
+                
+                // Actualizar el modal con los detalles
+                document.getElementById('modal-order-id').textContent = orderDetails.id;
+                document.getElementById('modal-order-date').textContent = orderDetails.date;
+                document.getElementById('modal-order-status').textContent = orderDetails.status;
+                document.getElementById('modal-subtotal').textContent = '$' + orderDetails.subtotal.toFixed(2);
+                document.getElementById('modal-discount').textContent = '$' + orderDetails.discount.toFixed(2);
+                document.getElementById('modal-total').textContent = '$' + orderDetails.total.toFixed(2);
+                document.getElementById('modal-payment-method').textContent = orderDetails.paymentMethod;
+                document.getElementById('modal-payment-status').textContent = orderDetails.paymentStatus;
+                
+                // Generar lista de productos
+                const productsContainer = document.getElementById('modal-products');
+                productsContainer.innerHTML = '';
+                
+                orderDetails.products.forEach(product => {
+                    const productElement = document.createElement('div');
+                    productElement.className = 'purchase-product-item';
+                    productElement.innerHTML = `
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="product-details">
+                            <h5>${product.name}</h5>
+                            <p class="product-license">Licencia de pago único</p>
+                            <p class="product-price">$${product.price.toFixed(2)}</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-sm btn-primary">Descargar</button>
+                            <button class="btn btn-sm btn-outline">Ver Licencia</button>
+                        </div>
+                    `;
+                    productsContainer.appendChild(productElement);
+                });
+            }
+            
+            // Botón de descarga de factura
+            document.getElementById('download-invoice').addEventListener('click', function() {
+                const orderId = document.getElementById('modal-order-id').textContent;
+                alert(`Descargando factura para el pedido ${orderId}...`);
+            });
+        });
+    </script>
+</body>
+</html>
